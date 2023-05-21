@@ -44,10 +44,10 @@ namespace Design_Pattern_Project_.State
             form.Drink.Enabled = true;
             form.Pastris.Enabled=true;
             form.CupDrink.Enabled = true;
-            form.comboBoxSnack.Enabled = true;  
+           /* form.comboBoxSnack.Enabled = true;  
             form.comboBoxPastris.Enabled = true;
             form.comboBoxDrink.Enabled = true;
-            form.comboBoxCupDrink.Enabled=true;
+            form.comboBoxCupDrink.Enabled=true;*/
             
 
             //throw new NotImplementedException();

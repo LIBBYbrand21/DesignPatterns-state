@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Snack = new System.Windows.Forms.Label();
-            this.Drink = new System.Windows.Forms.Label();
-            this.Pastris = new System.Windows.Forms.Label();
+            this.Snack = new System.Windows.Forms.Button();
+            this.Drink = new System.Windows.Forms.Button();
+            this.Pastris = new System.Windows.Forms.Button();
             this.comboBoxSnack = new System.Windows.Forms.ComboBox();
             this.comboBoxPastris = new System.Windows.Forms.ComboBox();
             this.comboBoxDrink = new System.Windows.Forms.ComboBox();
             this.comboBoxCupDrink = new System.Windows.Forms.ComboBox();
-            this.CupDrink = new System.Windows.Forms.Label();
+            this.CupDrink = new System.Windows.Forms.Button();
             this.startButton = new System.Windows.Forms.Button();
             this.getMoreItems = new System.Windows.Forms.Button();
             this.paymentButton = new System.Windows.Forms.Button();
@@ -51,9 +51,10 @@
             // 
             this.Snack.AutoSize = true;
             this.Snack.Enabled = false;
-            this.Snack.Location = new System.Drawing.Point(47, 53);
+            this.Snack.Location = new System.Drawing.Point(41, 40);
+            this.Snack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Snack.Name = "Snack";
-            this.Snack.Size = new System.Drawing.Size(56, 20);
+            this.Snack.Size = new System.Drawing.Size(55, 25);
             this.Snack.TabIndex = 1;
             this.Snack.Text = "חטיפים";
             // 
@@ -61,9 +62,10 @@
             // 
             this.Drink.AutoSize = true;
             this.Drink.Enabled = false;
-            this.Drink.Location = new System.Drawing.Point(192, 53);
+            this.Drink.Location = new System.Drawing.Point(168, 40);
+            this.Drink.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Drink.Name = "Drink";
-            this.Drink.Size = new System.Drawing.Size(46, 20);
+            this.Drink.Size = new System.Drawing.Size(46, 25);
             this.Drink.TabIndex = 2;
             this.Drink.Text = "שתיה";
             // 
@@ -71,9 +73,10 @@
             // 
             this.Pastris.AutoSize = true;
             this.Pastris.Enabled = false;
-            this.Pastris.Location = new System.Drawing.Point(339, 52);
+            this.Pastris.Location = new System.Drawing.Point(297, 39);
+            this.Pastris.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Pastris.Name = "Pastris";
-            this.Pastris.Size = new System.Drawing.Size(52, 20);
+            this.Pastris.Size = new System.Drawing.Size(52, 25);
             this.Pastris.TabIndex = 3;
             this.Pastris.Text = "מאפים";
             // 
@@ -95,9 +98,10 @@
             "שוגי",
             "פסק זמן",
             "שוקולד חלבי עילית"});
-            this.comboBoxSnack.Location = new System.Drawing.Point(12, 76);
+            this.comboBoxSnack.Location = new System.Drawing.Point(10, 73);
+            this.comboBoxSnack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxSnack.Name = "comboBoxSnack";
-            this.comboBoxSnack.Size = new System.Drawing.Size(129, 28);
+            this.comboBoxSnack.Size = new System.Drawing.Size(113, 23);
             this.comboBoxSnack.TabIndex = 6;
             this.comboBoxSnack.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -116,9 +120,10 @@
             "בייגל בצל",
             "קרואוסון",
             "סמבוסק"});
-            this.comboBoxPastris.Location = new System.Drawing.Point(304, 76);
+            this.comboBoxPastris.Location = new System.Drawing.Point(265, 73);
+            this.comboBoxPastris.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxPastris.Name = "comboBoxPastris";
-            this.comboBoxPastris.Size = new System.Drawing.Size(151, 28);
+            this.comboBoxPastris.Size = new System.Drawing.Size(133, 23);
             this.comboBoxPastris.TabIndex = 7;
             // 
             // comboBoxDrink
@@ -138,9 +143,10 @@
             "ספרייט",
             "קוקה קולה דיאט",
             "קוקה קולה"});
-            this.comboBoxDrink.Location = new System.Drawing.Point(147, 76);
+            this.comboBoxDrink.Location = new System.Drawing.Point(127, 73);
+            this.comboBoxDrink.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxDrink.Name = "comboBoxDrink";
-            this.comboBoxDrink.Size = new System.Drawing.Size(151, 28);
+            this.comboBoxDrink.Size = new System.Drawing.Size(133, 23);
             this.comboBoxDrink.TabIndex = 8;
             // 
             // comboBoxCupDrink
@@ -160,26 +166,28 @@
             "קפה נמס",
             "קפה שחור",
             "צ\'וקולטה"});
-            this.comboBoxCupDrink.Location = new System.Drawing.Point(461, 75);
+            this.comboBoxCupDrink.Location = new System.Drawing.Point(403, 73);
+            this.comboBoxCupDrink.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxCupDrink.Name = "comboBoxCupDrink";
-            this.comboBoxCupDrink.Size = new System.Drawing.Size(151, 28);
+            this.comboBoxCupDrink.Size = new System.Drawing.Size(133, 23);
             this.comboBoxCupDrink.TabIndex = 9;
             // 
             // CupDrink
             // 
             this.CupDrink.AutoSize = true;
             this.CupDrink.Enabled = false;
-            this.CupDrink.Location = new System.Drawing.Point(493, 52);
+            this.CupDrink.Location = new System.Drawing.Point(431, 41);
             this.CupDrink.Name = "CupDrink";
-            this.CupDrink.Size = new System.Drawing.Size(72, 20);
+            this.CupDrink.Size = new System.Drawing.Size(67, 25);
             this.CupDrink.TabIndex = 10;
             this.CupDrink.Text = "כוס שתיה";
             // 
             // startButton
             // 
-            this.startButton.Location = new System.Drawing.Point(257, 3);
+            this.startButton.Location = new System.Drawing.Point(225, 2);
+            this.startButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.startButton.Name = "startButton";
-            this.startButton.Size = new System.Drawing.Size(164, 34);
+            this.startButton.Size = new System.Drawing.Size(144, 26);
             this.startButton.TabIndex = 11;
             this.startButton.Text = "לחץ להתחלה";
             this.startButton.UseVisualStyleBackColor = true;
@@ -188,9 +196,10 @@
             // getMoreItems
             // 
             this.getMoreItems.Enabled = false;
-            this.getMoreItems.Location = new System.Drawing.Point(633, 110);
+            this.getMoreItems.Location = new System.Drawing.Point(554, 82);
+            this.getMoreItems.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.getMoreItems.Name = "getMoreItems";
-            this.getMoreItems.Size = new System.Drawing.Size(155, 40);
+            this.getMoreItems.Size = new System.Drawing.Size(136, 30);
             this.getMoreItems.TabIndex = 12;
             this.getMoreItems.Text = "בחירת מוצר נוסף";
             this.getMoreItems.UseVisualStyleBackColor = true;
@@ -198,9 +207,10 @@
             // paymentButton
             // 
             this.paymentButton.Enabled = false;
-            this.paymentButton.Location = new System.Drawing.Point(633, 156);
+            this.paymentButton.Location = new System.Drawing.Point(554, 117);
+            this.paymentButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.paymentButton.Name = "paymentButton";
-            this.paymentButton.Size = new System.Drawing.Size(155, 36);
+            this.paymentButton.Size = new System.Drawing.Size(136, 27);
             this.paymentButton.TabIndex = 13;
             this.paymentButton.Text = "תשלום";
             this.paymentButton.UseVisualStyleBackColor = true;
@@ -209,9 +219,10 @@
             // 
             this.giftButton.AutoSize = true;
             this.giftButton.Enabled = false;
-            this.giftButton.Location = new System.Drawing.Point(635, 217);
+            this.giftButton.Location = new System.Drawing.Point(556, 163);
+            this.giftButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.giftButton.Name = "giftButton";
-            this.giftButton.Size = new System.Drawing.Size(109, 24);
+            this.giftButton.Size = new System.Drawing.Size(89, 19);
             this.giftButton.TabIndex = 14;
             this.giftButton.TabStop = true;
             this.giftButton.Text = "אריזת מתנה";
@@ -221,9 +232,10 @@
             // 
             this.bagButton.AutoSize = true;
             this.bagButton.Enabled = false;
-            this.bagButton.Location = new System.Drawing.Point(635, 247);
+            this.bagButton.Location = new System.Drawing.Point(556, 185);
+            this.bagButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bagButton.Name = "bagButton";
-            this.bagButton.Size = new System.Drawing.Size(71, 24);
+            this.bagButton.Size = new System.Drawing.Size(57, 19);
             this.bagButton.TabIndex = 15;
             this.bagButton.TabStop = true;
             this.bagButton.Text = "שקית ";
@@ -233,9 +245,10 @@
             // 
             this.cashButton.AutoSize = true;
             this.cashButton.Enabled = false;
-            this.cashButton.Location = new System.Drawing.Point(635, 327);
+            this.cashButton.Location = new System.Drawing.Point(556, 245);
+            this.cashButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cashButton.Name = "cashButton";
-            this.cashButton.Size = new System.Drawing.Size(121, 24);
+            this.cashButton.Size = new System.Drawing.Size(97, 19);
             this.cashButton.TabIndex = 16;
             this.cashButton.TabStop = true;
             this.cashButton.Text = "תשלום במזומן";
@@ -245,9 +258,10 @@
             // 
             this.cardButton.AutoSize = true;
             this.cardButton.Enabled = false;
-            this.cardButton.Location = new System.Drawing.Point(635, 297);
+            this.cardButton.Location = new System.Drawing.Point(556, 223);
+            this.cardButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cardButton.Name = "cardButton";
-            this.cardButton.Size = new System.Drawing.Size(132, 24);
+            this.cardButton.Size = new System.Drawing.Size(106, 19);
             this.cardButton.TabIndex = 17;
             this.cardButton.TabStop = true;
             this.cardButton.Text = "תשלום באשראי";
@@ -257,26 +271,26 @@
             // 
             this.toPayLabel.AutoSize = true;
             this.toPayLabel.Enabled = false;
-            this.toPayLabel.Location = new System.Drawing.Point(667, 75);
+            this.toPayLabel.Location = new System.Drawing.Point(584, 56);
             this.toPayLabel.Name = "toPayLabel";
-            this.toPayLabel.Size = new System.Drawing.Size(100, 20);
+            this.toPayLabel.Size = new System.Drawing.Size(81, 15);
             this.toPayLabel.TabIndex = 18;
             this.toPayLabel.Text = "סה\"כ לתשלום";
             // 
             // selasLabel
             // 
             this.selasLabel.AutoSize = true;
-            this.selasLabel.Location = new System.Drawing.Point(238, 421);
+            this.selasLabel.Location = new System.Drawing.Point(208, 316);
             this.selasLabel.Name = "selasLabel";
-            this.selasLabel.Size = new System.Drawing.Size(311, 20);
+            this.selasLabel.Size = new System.Drawing.Size(247, 15);
             this.selasLabel.TabIndex = 19;
             this.selasLabel.Text = "שמחים שבחרת להשתמש במוצרינו,קניה מהנה!";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(700, 338);
             this.Controls.Add(this.selasLabel);
             this.Controls.Add(this.toPayLabel);
             this.Controls.Add(this.cardButton);
@@ -294,6 +308,7 @@
             this.Controls.Add(this.Pastris);
             this.Controls.Add(this.Drink);
             this.Controls.Add(this.Snack);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -303,14 +318,14 @@
         }
 
         #endregion
-        public Label Snack;
-        public Label Drink;
-        public Label Pastris;
+        public Button Snack;
+        public Button Drink;
+        public Button Pastris;
         public ComboBox comboBoxSnack;
         public ComboBox comboBoxPastris;
         public ComboBox comboBoxDrink;
         public ComboBox comboBoxCupDrink;
-        public Label CupDrink;
+        public Button CupDrink;
         public Button startButton;
         public Button getMoreItems;
         public Button paymentButton;
