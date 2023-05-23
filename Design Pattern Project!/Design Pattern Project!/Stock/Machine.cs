@@ -15,12 +15,15 @@ namespace Design_Pattern_Project_.Stock
     {
         private Form1 form;
         private MenuState currentState;
-/*        private Menu items;
-*/
+        List<Item> selectedItems;
+        public double totalPrice;
+        /*        private Menu items;
+        */
         public Machine(Form1 form)
         {
             this.form = form;
-            /*items = new Menu();*/
+            totalPrice = 0;
+            selectedItems = new List<Item>();
             CreateComBox();
         }
         private void CreateComBox()
@@ -86,6 +89,11 @@ namespace Design_Pattern_Project_.Stock
                         MessageBox.Show($"{itemEntry.Value}");
                         inventory[item] -= 1;
                         MessageBox.Show($"{inventory[item]}");
+                        selectedItems.Add(itemEntry.Key);
+                        totalPrice += itemEntry.Key.Price;
+                        form.toPayLabel.Enabled = true;
+                        form.toPayLabel.Text = $"{totalPrice:c2}";
+                        form.selasLabel.Text += "* " + item.Name.ToString();
                         form.homePageState.display();
                         form.comboBoxSnack.Enabled = false;
                     }
