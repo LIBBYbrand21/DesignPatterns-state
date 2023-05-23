@@ -1,5 +1,6 @@
 using Design_Pattern_Project_.State;
 using Design_Pattern_Project_.Stock;
+using DesignPatternsProject.Stock;
 
 namespace Design_Pattern_Project_
 {
@@ -7,14 +8,17 @@ namespace Design_Pattern_Project_
     {
         private HomePageState homePageState;
         private ItemDetailesState itemDetails;
-        Machine machun;
+        Machine machine;
+        private object items;
+        
 
         public Form1()
         {
             InitializeComponent();
             homePageState = new HomePageState(this);
             itemDetails = new ItemDetailesState(this);
-            machun = new Machine(this); 
+            machine = new Machine(this);
+            items = new Menu();
 
         }
 
@@ -74,6 +78,15 @@ namespace Design_Pattern_Project_
 
         private void comboBoxPastris_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void comboBoxSnack_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedItem = comboBoxSnack.Items[comboBoxSnack.SelectedIndex].ToString();
+            MessageBox.Show(selectedItem);
+            machine.SelectedText(selectedItem);
+
 
         }
     }

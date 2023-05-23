@@ -25,8 +25,8 @@ namespace Design_Pattern_Project_.State
             form.Drink.Enabled = true;
             form.Pastris.Enabled=true;
             form.CupDrink.Enabled = true;
-            MenuState state = new ItemDetailesState(form);
-            machine. TransitionTo(state);
+            /*MenuState state = new ItemDetailesState(form);
+            machine. TransitionTo(state);*/
             Console.WriteLine("ConcreteState home page display");
         }
 

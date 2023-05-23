@@ -13,57 +13,90 @@ namespace Design_Pattern_Project_.Stock
     {
         private Form1 form;
         private MenuState currentState;
+        private Menu items;
 
         public Machine(Form1 form)
         {
-            this.form = form;   
+            this.form = form;
+            items = new Menu();
             CreateComBox();
         }
         private void CreateComBox()
         {
-            foreach (var itemEntry in Menu.inventoryDrink)
+            foreach (var itemEntry in items.inventoryDrink)
             {
                 Item item = itemEntry.Key;
                 string itemName = item.Name;
                 double itemPrice = item.Price;
                 string itemDetails = $"{itemName} - {itemPrice:C2}";
-                form.comboBoxDrink.Items.Add(itemDetails);
+                form.comboBoxDrink.Items.Add(itemEntry.Key);
+                // form.comboBoxDrink.Items.Add(itemDetails);
                 /*if (itemEntry.Value < 1)
                 {
                 }*/
             }
-            foreach (var itemEntry in Menu.inventoryPastris)
+            foreach (var itemEntry in items.inventoryPastris)
             {
                 Item item = itemEntry.Key;
                 string itemName = item.Name;
                 double itemPrice = item.Price;
                 string itemDetails = $"{itemName} - {itemPrice:C2}";
-                form.comboBoxPastris.Items.Add(itemDetails);
+                form.comboBoxPastris.Items.Add(itemEntry.Key);
                 /*if (itemEntry.Value < 1)
                 {
                 }*/
             }
-            foreach (var itemEntry in Menu.inventoryCupDrink)
+            foreach (var itemEntry in items.inventoryCupDrink)
             {
                 Item item = itemEntry.Key;
                 string itemName = item.Name;
                 double itemPrice = item.Price;
                 string itemDetails = $"{itemName} - {itemPrice:C2}";
-                form.comboBoxCupDrink.Items.Add(itemDetails);
-                /*if (itemEntry.Value < 1)
-                {
-                }*/
+                form.comboBoxCupDrink.Items.Add(itemEntry.Key);
+                /*                form.comboBoxCupDrink.Items.Add(itemDetails);
+                */                /*if (itemEntry.Value < 1)
+                                {
+                                }*/
             }
-            foreach (var itemEntry in Menu.inventorySnack)
+            foreach (var itemEntry in items.inventorySnack)
             {
                 Item item = itemEntry.Key;
                 string itemName = item.Name;
                 double itemPrice = item.Price;
                 string itemDetails = $"{itemName} - {itemPrice:C2}";
-                form.comboBoxSnack.Items.Add(itemDetails);
-                /*if (itemEntry.Value < 1)
+                form.comboBoxSnack.Items.Add(itemEntry.Key);
+                /*                form.comboBoxSnack.Items.Add(itemDetails);
+                */                /*if (itemEntry.Value < 1)
+                                {
+                                }*/
+            }
+        }
+        public void SelectedText(string selectedItem)
+        {
+            foreach (var itemEntry in items.inventorySnack)
+            {
+                Item item = itemEntry.Key;
+                string itemName = item.Name;
+                double itemPrice = item.Price;
+                string itemDetails = $"{itemName} - {itemPrice:C2}";
+                if (selectedItem == itemDetails)
                 {
-                }*/
+
+                    if (itemEntry.Value < 0)
+                    {
+                        MessageBox.Show("...");
+                        break;
+                    }
+                    else
+                    {
+                        itemEntry.Value -= 1;
+
+                    }
+
+
+
+
+                }
             }
         }
         public void TransitionTo(MenuState state)

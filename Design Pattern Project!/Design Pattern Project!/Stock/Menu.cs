@@ -9,10 +9,10 @@ namespace DesignPatternsProject.Stock
 {
     public class Menu
     {
-        public static Dictionary<Item, int> inventoryPastris { get; set; }
-        public static Dictionary<Item, int> inventoryDrink { get; set; }
-        public static Dictionary<Item, int> inventoryCupDrink { get; set; }
-        public static Dictionary<Item, int> inventorySnack { get; set; }
+        public Dictionary<Item, int> inventoryPastris { get; set; }
+        public Dictionary<Item, int> inventoryDrink { get; set; }
+        public Dictionary<Item, int> inventoryCupDrink { get; set; }
+        public Dictionary<Item, int> inventorySnack { get; set; }
 
 
 
@@ -25,7 +25,7 @@ namespace DesignPatternsProject.Stock
             InitializeInventory();
         }
 
-        private void InitializeInventory()
+        public void InitializeInventory()
         {
             inventoryPastris.Add(new NotReadyItem() { Name = "סמבוסק", Price = 10.5 }, 20);
             inventoryPastris.Add(new NotReadyItem() { Name = "קרואוסון", Price = 10.5 }, 20);

@@ -21,7 +21,8 @@ namespace Design_Pattern_Project_.State
         }
         public override void endOrder()
         {
-
+            MenuState state = new CompleteState(form);
+            machine.TransitionTo(state);
             Console.WriteLine("ConcreteState Item Detailes display items");
         }
         public override void processPayment()
