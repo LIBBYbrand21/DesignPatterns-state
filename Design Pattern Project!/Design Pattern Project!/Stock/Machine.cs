@@ -3,9 +3,11 @@ using DesignPatternsProject.AbstractFactory.prop;
 using DesignPatternsProject.Stock;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace Design_Pattern_Project_.Stock
 {
@@ -78,7 +80,8 @@ namespace Design_Pattern_Project_.Stock
                 Item item = itemEntry.Key;
                 string itemName = item.Name;
                 double itemPrice = item.Price;
-                string itemDetails = $"{itemName} - {itemPrice:C2}";
+                string itemDetails = $" {itemName} מחיר- {itemPrice:C2}";
+
                 if (selectedItem == itemDetails)
                 {
 
@@ -87,11 +90,15 @@ namespace Design_Pattern_Project_.Stock
                         MessageBox.Show("...");
                         break;
                     }
-                    else
-                    {
-                        itemEntry.Value -= 1;
+                    else {
+                        MessageBox.Show($"{itemEntry.Value}");
+                        items.inventorySnack[item]-=1;
+                        
+                        MessageBox.Show($"{itemEntry.Value}");
+
 
                     }
+                    // itemEntry.Value -= 1;
 
 
 
