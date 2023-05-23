@@ -53,5 +53,20 @@ namespace Design_Pattern_Project_
             comboBoxSnack.Enabled = true;
             itemDetails.display();
         }
+
+        private void paymentButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cardButton_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

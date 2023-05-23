@@ -12,12 +12,12 @@ namespace DesignPatternsProject.Builder
 
         public void BuildPaymentMethod()
         {
-            Console.WriteLine("Building cash payment method...");
+            MessageBox.Show("Building cash payment method...");
         }
 
         public void BuildPaymentAmount()
         {
-            Console.WriteLine("Building cash payment amount...");
+            MessageBox.Show("Building cash payment amount...");
         }
 
         public IPayment GetResult()

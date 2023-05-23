@@ -10,7 +10,7 @@ namespace DesignPatternsProject.Builder
     {
         public void ProcessPayment()
         {
-            Console.WriteLine("Processing credit payment...");
+            MessageBox.Show("Processing credit payment...");
         }
     }
 }

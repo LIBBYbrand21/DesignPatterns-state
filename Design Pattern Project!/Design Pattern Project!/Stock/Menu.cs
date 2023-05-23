@@ -26,63 +26,63 @@ namespace DesignPatternsProject.Stock
 
         private void InitializeInventory()
         {
-            inventoryPastris.Add(new NotReadyItem() { Name = "סמבוסק", Price = 10.5, Description = "" }, 20);
-            inventoryPastris.Add(new NotReadyItem() { Name = "קרואוסון", Price = 10.5, Description = "" }, 20);
-            inventoryPastris.Add(new NotReadyItem() { Name = "מלווח", Price = 8.5, Description = "" }, 20);
-            inventoryPastris.Add(new NotReadyItem() { Name = "בייגל בצל", Price = 5.0, Description = "" }, 20);
-            inventoryPastris.Add(new NotReadyItem() { Name = "בגט גבינה", Price = 15.5, Description = "" }, 20);
-            inventoryPastris.Add(new NotReadyItem() { Name = "סופלה", Price = 5.5, Description = "" }, 10);
-            inventoryPastris.Add(new NotReadyItem() { Name = "פיציה", Price = 8.5, Description = "" }, 15);
-            inventoryPastris.Add(new NotReadyItem() { Name = "רוגלה", Price = 4.0, Description = "" }, 20);
-            inventoryPastris.Add(new NotReadyItem() { Name = "בורקס גבינה", Price = 5.0, Description = "" }, 20);
-            inventoryPastris.Add(new NotReadyItem() { Name = "בורקס תפו'א", Price = 4.5, Description = "" }, 10);
+            inventoryPastris.Add(new NotReadyItem() { Name = "סמבוסק", Price = 10.5 }, 20);
+            inventoryPastris.Add(new NotReadyItem() { Name = "קרואוסון", Price = 10.5 }, 20);
+            inventoryPastris.Add(new NotReadyItem() { Name = "מלווח", Price = 8.5 }, 20);
+            inventoryPastris.Add(new NotReadyItem() { Name = "בייגל בצל", Price = 5.0 }, 20);
+            inventoryPastris.Add(new NotReadyItem() { Name = "בגט גבינה", Price = 15.5 }, 20);
+            inventoryPastris.Add(new NotReadyItem() { Name = "סופלה", Price = 5.5 }, 10);
+            inventoryPastris.Add(new NotReadyItem() { Name = "פיציה", Price = 8.5 }, 15);
+            inventoryPastris.Add(new NotReadyItem() { Name = "רוגלה", Price = 4.0 }, 20);
+            inventoryPastris.Add(new NotReadyItem() { Name = "בורקס גבינה", Price = 5.0 }, 20);
+            inventoryPastris.Add(new NotReadyItem() { Name = "בורקס תפו'א", Price = 4.5 }, 10);
 
 
-            inventoryDrink.Add(new ReadyItem() { Name = "סודה", Price = 7.5, Description = "" }, 10);
-            inventoryDrink.Add(new ReadyItem() { Name = "מים מינרלים", Price = 5.5, Description = "" }, 50);
-            inventoryDrink.Add(new ReadyItem() { Name = "מים בטעמים-תפוח", Price = 7.5, Description = "" }, 1);
-            inventoryDrink.Add(new ReadyItem() { Name = "מים בטעמים-ענבים", Price = 7.5, Description = "" }, 2);
-            inventoryDrink.Add(new ReadyItem() { Name = "בירה", Price = 12, Description = "" }, 10);
-            inventoryDrink.Add(new ReadyItem() { Name = "פפסי", Price = 8.5, Description = "" }, 15);
-            inventoryDrink.Add(new ReadyItem() { Name = "מירינדה", Price = 10.5, Description = "" }, 2);
-            inventoryDrink.Add(new ReadyItem() { Name = "ג'אמפ מנגו", Price = 12.5, Description = "" }, 12);
-            inventoryDrink.Add(new ReadyItem() { Name = "ג'אמפ תות בננה", Price = 10.0, Description = "" }, 15);
-            inventoryDrink.Add(new ReadyItem() { Name = "ספרייט", Price = 9.5, Description = "" }, 20);
-            inventoryDrink.Add(new ReadyItem() { Name = "קוקה קולה דיאט", Price = 9.9, Description = "" }, 10);
-            inventoryDrink.Add(new ReadyItem() { Name = "קוקה קולה ", Price = 9.9, Description = "" }, 20);
+            inventoryDrink.Add(new ReadyItem() { Name = "סודה", Price = 7.5 }, 10);
+            inventoryDrink.Add(new ReadyItem() { Name = "מים מינרלים", Price = 5.5 }, 50);
+            inventoryDrink.Add(new ReadyItem() { Name = "מים בטעמים-תפוח", Price = 7.5 }, 1);
+            inventoryDrink.Add(new ReadyItem() { Name = "מים בטעמים-ענבים", Price = 7.5 }, 2);
+            inventoryDrink.Add(new ReadyItem() { Name = "בירה", Price = 12 }, 10);
+            inventoryDrink.Add(new ReadyItem() { Name = "פפסי", Price = 8.5 }, 15);
+            inventoryDrink.Add(new ReadyItem() { Name = "מירינדה", Price = 10.5 }, 2);
+            inventoryDrink.Add(new ReadyItem() { Name = "ג'אמפ מנגו", Price = 12.5 }, 12);
+            inventoryDrink.Add(new ReadyItem() { Name = "ג'אמפ תות בננה", Price = 10.0 }, 15);
+            inventoryDrink.Add(new ReadyItem() { Name = "ספרייט", Price = 9.5, }, 20);
+            inventoryDrink.Add(new ReadyItem() { Name = "קוקה קולה דיאט", Price = 9.9 }, 10);
+            inventoryDrink.Add(new ReadyItem() { Name = "קוקה קולה ", Price = 9.9 }, 20);
 
 
-            inventoryCupDrink.Add(new NotReadyItem() { Name = "אקספרסו", Price = 8.5, Description = "" }, 5);
-            inventoryCupDrink.Add(new NotReadyItem() { Name = "שייק פירות", Price = 7.5, Description = "" }, 5);
-            inventoryCupDrink.Add(new NotReadyItem() { Name = "ברד פטל", Price = 5.5, Description = "" }, 10);
-            inventoryCupDrink.Add(new NotReadyItem() { Name = "ברד ענבים", Price = 5.5, Description = "" }, 10);
-            inventoryCupDrink.Add(new NotReadyItem() { Name = "אייס וניל", Price = 7.5, Description = "" }, 10);
-            inventoryCupDrink.Add(new NotReadyItem() { Name = "אייס פסיפלורה", Price = 5.5, Description = "" }, 15);
-            inventoryCupDrink.Add(new NotReadyItem() { Name = "אייס אגוזים", Price = 8.5, Description = "" }, 15);
-            inventoryCupDrink.Add(new NotReadyItem() { Name = "אייס קפה", Price = 8.5, Description = "" }, 20);
-            inventoryCupDrink.Add(new NotReadyItem() { Name = "קפה הפוך", Price = 7.5, Description = "" }, 10);
-            inventoryCupDrink.Add(new NotReadyItem() { Name = "קפה נמס", Price = 10.5, Description = "" }, 20);
-            inventoryCupDrink.Add(new NotReadyItem() { Name = "קפה שחור", Price = 10.5, Description = "" }, 15);
-            inventoryCupDrink.Add(new NotReadyItem() { Name = "צ'וקולטה", Price = 7.5, Description = "" }, 10);
+            inventoryCupDrink.Add(new NotReadyItem() { Name = "אקספרסו", Price = 8.5 }, 5);
+            inventoryCupDrink.Add(new NotReadyItem() { Name = "שייק פירות", Price = 7.5 }, 5);
+            inventoryCupDrink.Add(new NotReadyItem() { Name = "ברד פטל", Price = 5.5 }, 10);
+            inventoryCupDrink.Add(new NotReadyItem() { Name = "ברד ענבים", Price = 5.5 }, 10);
+            inventoryCupDrink.Add(new NotReadyItem() { Name = "אייס וניל", Price = 7.5 }, 10);
+            inventoryCupDrink.Add(new NotReadyItem() { Name = "אייס פסיפלורה", Price = 5.5 }, 15);
+            inventoryCupDrink.Add(new NotReadyItem() { Name = "אייס אגוזים", Price = 8.5 }, 15);
+            inventoryCupDrink.Add(new NotReadyItem() { Name = "אייס קפה", Price = 8.5 }, 20);
+            inventoryCupDrink.Add(new NotReadyItem() { Name = "קפה הפוך", Price = 7.5 }, 10);
+            inventoryCupDrink.Add(new NotReadyItem() { Name = "קפה נמס", Price = 10.5 }, 20);
+            inventoryCupDrink.Add(new NotReadyItem() { Name = "קפה שחור", Price = 10.5 }, 15);
+            inventoryCupDrink.Add(new NotReadyItem() { Name = "צ'וקולטה", Price = 7.5 }, 10);
 
 
-            inventorySnack.Add(new ReadyItem() { Name = "שוקולד חלבי עילית", Price = 5.5, Description = "" }, 10);
-            inventorySnack.Add(new ReadyItem() { Name = "פסק זמן", Price = 3.5, Description = "" }, 10);
-            inventorySnack.Add(new ReadyItem() { Name = "שוגי", Price = 2.5, Description = "" }, 10);
-            inventorySnack.Add(new ReadyItem() { Name = "נשנושים", Price = 8.5, Description = "" }, 10);
-            inventorySnack.Add(new ReadyItem() { Name = "פריכיות אורז בשוקולד", Price = 6.5, Description = "" }, 10);
-            inventorySnack.Add(new ReadyItem() { Name = "צ'יטוס פיצה", Price = 6.0, Description = "" }, 10);
-            inventorySnack.Add(new ReadyItem() { Name = "צ'יטוס קטשופ", Price = 7.0, Description = "" }, 10);
-            inventorySnack.Add(new ReadyItem() { Name = "דוריטוס חריף אש", Price = 5.5, Description = "" }, 10);
-            inventorySnack.Add(new ReadyItem() { Name = "דוריטוס חמוץ חריף", Price = 5.5, Description = "" }, 10);
-            inventorySnack.Add(new ReadyItem() { Name = "דוריטוס טבעי", Price = 8.5, Description = "" }, 10);
-            inventorySnack.Add(new ReadyItem() { Name = "תפוצ'יפס שמנת בצל", Price = 9.5, Description = "" }, 10);
-            inventorySnack.Add(new ReadyItem() { Name = "תפוצ'יפס טבעי", Price = 7.5, Description = "" }, 10);
+            inventorySnack.Add(new ReadyItem() { Name = "שוקולד חלבי עילית", Price = 5.5 }, 10);
+            inventorySnack.Add(new ReadyItem() { Name = "פסק זמן", Price = 3.5 }, 10);
+            inventorySnack.Add(new ReadyItem() { Name = "שוגי", Price = 2.5}, 10);
+            inventorySnack.Add(new ReadyItem() { Name = "נשנושים", Price = 8.5 }, 10);
+            inventorySnack.Add(new ReadyItem() { Name = "פריכיות אורז בשוקולד", Price = 6.5 }, 10);
+            inventorySnack.Add(new ReadyItem() { Name = "צ'יטוס פיצה", Price = 6.0}, 10);
+            inventorySnack.Add(new ReadyItem() { Name = "צ'יטוס קטשופ", Price = 7.0}, 10);
+            inventorySnack.Add(new ReadyItem() { Name = "דוריטוס חריף אש", Price = 5.5 }, 10);
+            inventorySnack.Add(new ReadyItem() { Name = "דוריטוס חמוץ חריף", Price = 5.5 }, 10);
+            inventorySnack.Add(new ReadyItem() { Name = "דוריטוס טבעי", Price = 8.5 }, 10);
+            inventorySnack.Add(new ReadyItem() { Name = "תפוצ'יפס שמנת בצל", Price = 9.5 }, 10);
+            inventorySnack.Add(new ReadyItem() { Name = "תפוצ'יפס טבעי", Price = 7.5 }, 10);
 
 
         }
 
-        public static List<NotReadyItem> PastrisList = new List<NotReadyItem>()
+        /*public static List<NotReadyItem> PastrisList = new List<NotReadyItem>()
           {
               new NotReadyItem("בורקס תפו'א",10,9.9),
               new NotReadyItem("בורקס גבינה",10,9.9),
@@ -140,43 +140,43 @@ namespace DesignPatternsProject.Stock
               new NotReadyItem("ברד פטל",10,2),
               new NotReadyItem("שייק פירות",10,15),
               new NotReadyItem("אקספרסו",10,7),
-      };
+      };*/
 
         /*public static List<Item> GenerateItems()
         {*/
-            /*    List<Item> items = new List<Item>();
-              // items = new Dictionary<Item, int>();
-                // public Dictionary<Item, int> items { get; set; }
+        /*    List<Item> items = new List<Item>();
+          // items = new Dictionary<Item, int>();
+            // public Dictionary<Item, int> items { get; set; }
 
-                // Clone the DrinkList
-                 foreach (var drink in inventoryDrink)
-                {
-                    items.Add(drink.Clone());
-                }
+            // Clone the DrinkList
+             foreach (var drink in inventoryDrink)
+            {
+                items.Add(drink.Clone());
+            }
 
-                // Clone the snackList
-                foreach (var snack in inventorySnack)
-                {
-                    items.Add(snack.Clone());
-                }
+            // Clone the snackList
+            foreach (var snack in inventorySnack)
+            {
+                items.Add(snack.Clone());
+            }
 
-                // Clone the PastriesList
-                foreach (var pastry in inventoryPastris)
-                {
-                    items.Add(pastry.Clone());
-                }
+            // Clone the PastriesList
+            foreach (var pastry in inventoryPastris)
+            {
+                items.Add(pastry.Clone());
+            }
 
-                // Clone the CupDrinkList
-                foreach (var cupDrink in inventoryCupDrink)
-                {
-                    items.Add(cupDrink.Clone());
-                }
+            // Clone the CupDrinkList
+            foreach (var cupDrink in inventoryCupDrink)
+            {
+                items.Add(cupDrink.Clone());
+            }
 
-                return items;
-            }*/
+            return items;
+        }*/
 
-            // Define the DrinkList, snackList, PastriesList, and CupDrinkList here
-       /* }*/
+        // Define the DrinkList, snackList, PastriesList, and CupDrinkList here
+        /* }*/
 
     }
 }

@@ -12,7 +12,7 @@ namespace DesignPatternsProject.Decorator
         public BagDecorator(Item item) : base(item)
         {
             this.Name = item.Name + " (in a bag)";
-            this.Price = 0.5;
+            this.Price += 0.5;
             this.Description = item.Description + " (in a bag)";
         }
     }

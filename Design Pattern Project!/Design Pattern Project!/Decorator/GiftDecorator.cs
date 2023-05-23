@@ -12,7 +12,7 @@ namespace DesignPatternsProject.Decorator
         public GiftDecorator(Item item) : base(item)
         {
             this.Name = item.Name + " (as a gift)";
-            this.Price = 1.0;
+            this.Price+= 1.0;
             this.Description = item.Description + " (as a gift)";
         }
     }

@@ -18,22 +18,18 @@ namespace Design_Pattern_Project_.Stock
         {
            // currentState.display();
         }
-
         public void SelectItem()
         {
             //currentState.selectItem();
         }
-
         public void ProcessPayment()
         {
             //currentState.processPayment();
         }
-
         public void ChangeToItemDetailsState()
         {
            // currentState = new ItemDetailesState();
         }
-
         public void ChangeToPaymentState()
         {
             //currentState = new PaymentState();
