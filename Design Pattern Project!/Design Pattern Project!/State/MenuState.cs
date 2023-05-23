@@ -15,5 +15,7 @@ namespace Design_Pattern_Project_.State
 
         public abstract void processPayment();
 
+        public abstract void endOrder();
+
     }
 }

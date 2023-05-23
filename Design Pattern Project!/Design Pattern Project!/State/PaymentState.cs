@@ -9,38 +9,27 @@ namespace Design_Pattern_Project_.State
 {
     internal class PaymentState : MenuState
     {
-        /*public override void Handle1(MachineMenu mech)
+        private Form1 form;
+        public PaymentState(Form1 form)
         {
-            throw new NotImplementedException();
+            this.form = form;
         }
-
-        public override void Handle1(MachineMenu mech)
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void Handle2()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void Handle2(MachineMenu mech)
-        {
-            throw new NotImplementedException();
-        }*/
         public override void display()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("ConcreteState Item Detailes display items");
         }
-
+        public override void endOrder()
+        {
+            Console.WriteLine("ConcreteState Item Detailes display items");
+        }
         public override void processPayment()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("ConcreteState Item Detailes display items");
         }
 
         public override void selectItem()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("ConcreteState Item Detailes display items");
         }
     }
 }

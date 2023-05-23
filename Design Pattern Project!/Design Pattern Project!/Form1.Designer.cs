@@ -88,7 +88,7 @@
             this.comboBoxSnack.DisplayMember = "Snack";
             this.comboBoxSnack.Enabled = false;
             this.comboBoxSnack.FormattingEnabled = true;
-            this.comboBoxSnack.Items.AddRange(new object[] {
+            /*this.comboBoxSnack.Items.AddRange(new object[] {
             "תפוצ\'יפס טבעי",
             "תפוצ\'יפס שמנת בצל",
             "דוריטוס טבעי",
@@ -100,7 +100,7 @@
             "נשנושים",
             "שוגי",
             "פסק זמן",
-            "שוקולד חלבי עילית"});
+            "שוקולד חלבי עילית"});*/
             this.comboBoxSnack.Location = new System.Drawing.Point(10, 73);
             this.comboBoxSnack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxSnack.Name = "comboBoxSnack";
@@ -111,7 +111,7 @@
             // 
             this.comboBoxPastris.Enabled = false;
             this.comboBoxPastris.FormattingEnabled = true;
-            this.comboBoxPastris.Items.AddRange(new object[] {
+            /*this.comboBoxPastris.Items.AddRange(new object[] {
             "בורקס תפו\'א",
             "בורקס גבינה",
             "פיציה",
@@ -121,18 +121,19 @@
             "מלווח",
             "בייגל בצל",
             "קרואוסון",
-            "סמבוסק"});
+            "סמבוסק"});*/
             this.comboBoxPastris.Location = new System.Drawing.Point(265, 73);
             this.comboBoxPastris.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxPastris.Name = "comboBoxPastris";
             this.comboBoxPastris.Size = new System.Drawing.Size(133, 23);
             this.comboBoxPastris.TabIndex = 7;
+            this.comboBoxPastris.SelectedIndexChanged += new System.EventHandler(this.comboBoxPastris_SelectedIndexChanged);
             // 
             // comboBoxDrink
             // 
             this.comboBoxDrink.Enabled = false;
             this.comboBoxDrink.FormattingEnabled = true;
-            this.comboBoxDrink.Items.AddRange(new object[] {
+            /*this.comboBoxDrink.Items.AddRange(new object[] {
             "סודה",
             "מים מינרלים",
             "מים בטעמים-תפוח",
@@ -144,7 +145,7 @@
             "ג\'אמפ תות בננה",
             "ספרייט",
             "קוקה קולה דיאט",
-            "קוקה קולה"});
+            "קוקה קולה"});*/
             this.comboBoxDrink.Location = new System.Drawing.Point(127, 73);
             this.comboBoxDrink.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxDrink.Name = "comboBoxDrink";
@@ -155,7 +156,7 @@
             // 
             this.comboBoxCupDrink.Enabled = false;
             this.comboBoxCupDrink.FormattingEnabled = true;
-            this.comboBoxCupDrink.Items.AddRange(new object[] {
+            /*this.comboBoxCupDrink.Items.AddRange(new object[] {
             "אקספרסו",
             "שייק פירות",
             "ברד פטל",
@@ -167,7 +168,7 @@
             "קפה הפוך",
             "קפה נמס",
             "קפה שחור",
-            "צ\'וקולטה"});
+            "צ\'וקולטה"});*/
             this.comboBoxCupDrink.Location = new System.Drawing.Point(403, 73);
             this.comboBoxCupDrink.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxCupDrink.Name = "comboBoxCupDrink";

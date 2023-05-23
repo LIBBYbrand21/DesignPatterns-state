@@ -1,4 +1,5 @@
 using Design_Pattern_Project_.State;
+using Design_Pattern_Project_.Stock;
 
 namespace Design_Pattern_Project_
 {
@@ -6,12 +7,14 @@ namespace Design_Pattern_Project_
     {
         private HomePageState homePageState;
         private ItemDetailesState itemDetails;
+        Machine machun;
 
         public Form1()
         {
             InitializeComponent();
             homePageState = new HomePageState(this);
             itemDetails = new ItemDetailesState(this);
+            machun = new Machine(this); 
 
         }
 
@@ -65,6 +68,11 @@ namespace Design_Pattern_Project_
         }
 
         private void cardButton_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxPastris_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
