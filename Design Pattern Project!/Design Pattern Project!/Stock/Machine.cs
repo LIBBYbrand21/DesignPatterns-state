@@ -17,9 +17,9 @@ namespace Design_Pattern_Project_.Stock
         public Machine(Form1 form)
         {
             this.form = form;   
-            createComBox();
+            CreateComBox();
         }
-        private void createComBox()
+        private void CreateComBox()
         {
             foreach (var itemEntry in Menu.inventoryDrink)
             {

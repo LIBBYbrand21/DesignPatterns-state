@@ -8,9 +8,10 @@ using System.Windows.Forms;
 
 namespace Design_Pattern_Project_.State
 {
-    class ItemDetailesState : MenuState
+   public class ItemDetailesState : MenuState
     {
         private Form1 form;
+        private Machine machine;
         public ItemDetailesState(Form1 form)
         {
             this.form = form;
@@ -36,7 +37,8 @@ namespace Design_Pattern_Project_.State
         }
         public override void selectItem()
         {
-            form.TransitionTo(new PaymentState());
+            MenuState state = new PaymentState(form);
+            machine.TransitionTo(state);
             Console.WriteLine("ConcreteState Item Detailes select Item");
         }
     }

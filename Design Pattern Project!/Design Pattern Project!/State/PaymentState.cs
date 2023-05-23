@@ -7,9 +7,10 @@ using System.Threading.Tasks;
 
 namespace Design_Pattern_Project_.State
 {
-    internal class PaymentState : MenuState
+    public class PaymentState : MenuState
     {
         private Form1 form;
+        private Machine machine;
         public PaymentState(Form1 form)
         {
             this.form = form;
@@ -20,6 +21,7 @@ namespace Design_Pattern_Project_.State
         }
         public override void endOrder()
         {
+
             Console.WriteLine("ConcreteState Item Detailes display items");
         }
         public override void processPayment()

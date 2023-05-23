@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Design_Pattern_Project_.State
 {
-    internal class CompleteState : MenuState
+    public class CompleteState : MenuState
     {
         public override void display()
         {

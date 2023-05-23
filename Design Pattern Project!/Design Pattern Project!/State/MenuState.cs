@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Design_Pattern_Project_.State
 {
-    abstract class MenuState
+   public abstract class MenuState
     {
         public abstract void display();
 

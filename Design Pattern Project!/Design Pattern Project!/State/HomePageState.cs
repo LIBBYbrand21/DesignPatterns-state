@@ -8,11 +8,11 @@ using System.Windows.Forms;
 
 namespace Design_Pattern_Project_.State
 {
-    class HomePageState : MenuState
+   public class HomePageState : MenuState
     {
-
         private Form1 form;
-        
+        private Machine machine;
+
 
         public HomePageState(Form1 form)
         {
@@ -25,7 +25,8 @@ namespace Design_Pattern_Project_.State
             form.Drink.Enabled = true;
             form.Pastris.Enabled=true;
             form.CupDrink.Enabled = true;
-            form.TransitionTo(new ItemDetailesState());
+            MenuState state = new ItemDetailesState(form);
+            machine. TransitionTo(state);
             Console.WriteLine("ConcreteState home page display");
         }
 
