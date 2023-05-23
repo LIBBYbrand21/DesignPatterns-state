@@ -27,10 +27,10 @@ namespace Design_Pattern_Project_.Stock
         {
             foreach (var itemEntry in items.inventoryDrink)
             {
-                Item item = itemEntry.Key;
-                string itemName = item.Name;
-                double itemPrice = item.Price;
-                string itemDetails = $"{itemName} - {itemPrice:C2}";
+                /* Item item = itemEntry.Key;
+                 string itemName = item.Name;
+                 double itemPrice = item.Price;
+                 string itemDetails = $"{itemName} - {itemPrice:C2}";*/
                 form.comboBoxDrink.Items.Add(itemEntry.Key);
                 // form.comboBoxDrink.Items.Add(itemDetails);
                 /*if (itemEntry.Value < 1)
@@ -39,10 +39,10 @@ namespace Design_Pattern_Project_.Stock
             }
             foreach (var itemEntry in items.inventoryPastris)
             {
-                Item item = itemEntry.Key;
-                string itemName = item.Name;
-                double itemPrice = item.Price;
-                string itemDetails = $"{itemName} - {itemPrice:C2}";
+                /* Item item = itemEntry.Key;
+                 string itemName = item.Name;
+                 double itemPrice = item.Price;
+                 string itemDetails = $"{itemName} - {itemPrice:C2}";*/
                 form.comboBoxPastris.Items.Add(itemEntry.Key);
                 /*if (itemEntry.Value < 1)
                 {
@@ -50,10 +50,10 @@ namespace Design_Pattern_Project_.Stock
             }
             foreach (var itemEntry in items.inventoryCupDrink)
             {
-                Item item = itemEntry.Key;
+                /*Item item = itemEntry.Key;
                 string itemName = item.Name;
                 double itemPrice = item.Price;
-                string itemDetails = $"{itemName} - {itemPrice:C2}";
+                string itemDetails = $"{itemName} - {itemPrice:C2}";*/
                 form.comboBoxCupDrink.Items.Add(itemEntry.Key);
                 /*                form.comboBoxCupDrink.Items.Add(itemDetails);
                 */                /*if (itemEntry.Value < 1)
@@ -62,10 +62,7 @@ namespace Design_Pattern_Project_.Stock
             }
             foreach (var itemEntry in items.inventorySnack)
             {
-                Item item = itemEntry.Key;
-                string itemName = item.Name;
-                double itemPrice = item.Price;
-                string itemDetails = $"{itemName} - {itemPrice:C2}";
+
                 form.comboBoxSnack.Items.Add(itemEntry.Key);
                 /*                form.comboBoxSnack.Items.Add(itemDetails);
                 */                /*if (itemEntry.Value < 1)
@@ -78,25 +75,21 @@ namespace Design_Pattern_Project_.Stock
             foreach (var itemEntry in items.inventorySnack)
             {
                 Item item = itemEntry.Key;
-                string itemName = item.Name;
-                double itemPrice = item.Price;
-                string itemDetails = $" {itemName} מחיר- {itemPrice:C2}";
 
-                if (selectedItem == itemDetails)
+                if (selectedItem == item.ToString())
                 {
 
                     if (itemEntry.Value < 0)
                     {
-                        MessageBox.Show("...");
+                        MessageBox.Show("אין מספיק במלאי, הנך מוחזר לתפריט הקודם");
+                        //itemdetails.desplay();
                         break;
                     }
-                    else {
+                    else
+                    {
                         MessageBox.Show($"{itemEntry.Value}");
-                        items.inventorySnack[item]-=1;
-                        
-                        MessageBox.Show($"{itemEntry.Value}");
-
-
+                        items.inventorySnack[item] -= 1;
+                        MessageBox.Show($"{items.inventorySnack[item]}");
                     }
                     // itemEntry.Value -= 1;
 
