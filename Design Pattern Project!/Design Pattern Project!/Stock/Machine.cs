@@ -17,8 +17,8 @@ namespace Design_Pattern_Project_.Stock
         private MenuState currentState;
         List<Item> selectedItems;
         public double totalPrice;
-        /*        private Menu items;
-        */
+
+        
         public Machine(Form1 form)
         {
             this.form = form;
@@ -86,9 +86,9 @@ namespace Design_Pattern_Project_.Stock
                     }
                     else
                     {
-                        MessageBox.Show($"{itemEntry.Value}");
+                       // MessageBox.Show($"{itemEntry.Value}");
                         inventory[item] -= 1;
-                        MessageBox.Show($"{inventory[item]}");
+                      //  MessageBox.Show($"{inventory[item]}");
                         selectedItems.Add(itemEntry.Key);
                         totalPrice += itemEntry.Key.Price;
                         form.toPayLabel.Enabled = true;
@@ -96,6 +96,9 @@ namespace Design_Pattern_Project_.Stock
                         form.selasLabel.Text += "* " + item.Name.ToString();
                         form.homePageState.display();
                         form.comboBoxSnack.Enabled = false;
+                        form.comboBoxCupDrink.Enabled = false;
+                        form.comboBoxDrink.Enabled = false;
+                        form.comboBoxPastris.Enabled = false;
                     }
                 }
             }
