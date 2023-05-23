@@ -9,9 +9,6 @@ namespace DesignPatternsProject.AbstractFactory.Prototype
 {
     public interface ItemPrototype
     {
-
-
-        Item Clone();
-        
+      Item Clone();
     }
 }

@@ -15,10 +15,9 @@ namespace DesignPatternsProject.AbstractFactory.prop
         {
             Description = "Not Ready Item";
         }
-        public NotReadyItem(string name, int amount, double price)
+        public NotReadyItem(string name,  double price)
         {
             Name = name;
-           // Amount = amount;
             Price = price;
             Description = "not ready item";
 
