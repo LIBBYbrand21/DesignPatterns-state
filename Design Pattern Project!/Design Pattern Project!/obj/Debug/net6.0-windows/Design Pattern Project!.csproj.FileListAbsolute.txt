@@ -32,3 +32,20 @@ C:\Users\ברנד ליבי\Source\Repos\DesignPatterns-state\Design Pattern Proj
 C:\Users\ברנד ליבי\Source\Repos\DesignPatterns-state\Design Pattern Project!\Design Pattern Project!\obj\Debug\net6.0-windows\Design Pattern Project!.pdb
 C:\Users\ברנד ליבי\Source\Repos\DesignPatterns-state\Design Pattern Project!\Design Pattern Project!\obj\Debug\net6.0-windows\Design Pattern Project!.genruntimeconfig.cache
 C:\Users\ברנד ליבי\Source\Repos\DesignPatterns-state\Design Pattern Project!\Design Pattern Project!\obj\Debug\net6.0-windows\ref\Design Pattern Project!.dll
+C:\Users\The user\Documents\שנה ב\DesignPatterns\project\E\1\Design Pattern Project!\Design Pattern Project!\bin\Debug\net6.0-windows\Design Pattern Project!.exe
+C:\Users\The user\Documents\שנה ב\DesignPatterns\project\E\1\Design Pattern Project!\Design Pattern Project!\bin\Debug\net6.0-windows\Design Pattern Project!.deps.json
+C:\Users\The user\Documents\שנה ב\DesignPatterns\project\E\1\Design Pattern Project!\Design Pattern Project!\bin\Debug\net6.0-windows\Design Pattern Project!.runtimeconfig.json
+C:\Users\The user\Documents\שנה ב\DesignPatterns\project\E\1\Design Pattern Project!\Design Pattern Project!\bin\Debug\net6.0-windows\Design Pattern Project!.dll
+C:\Users\The user\Documents\שנה ב\DesignPatterns\project\E\1\Design Pattern Project!\Design Pattern Project!\bin\Debug\net6.0-windows\Design Pattern Project!.pdb
+C:\Users\The user\Documents\שנה ב\DesignPatterns\project\E\1\Design Pattern Project!\Design Pattern Project!\obj\Debug\net6.0-windows\Design Pattern Project!.csproj.AssemblyReference.cache
+C:\Users\The user\Documents\שנה ב\DesignPatterns\project\E\1\Design Pattern Project!\Design Pattern Project!\obj\Debug\net6.0-windows\Design_Pattern_Project_.Form1.resources
+C:\Users\The user\Documents\שנה ב\DesignPatterns\project\E\1\Design Pattern Project!\Design Pattern Project!\obj\Debug\net6.0-windows\Design Pattern Project!.csproj.GenerateResource.cache
+C:\Users\The user\Documents\שנה ב\DesignPatterns\project\E\1\Design Pattern Project!\Design Pattern Project!\obj\Debug\net6.0-windows\Design Pattern Project!.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\The user\Documents\שנה ב\DesignPatterns\project\E\1\Design Pattern Project!\Design Pattern Project!\obj\Debug\net6.0-windows\Design Pattern Project!.AssemblyInfoInputs.cache
+C:\Users\The user\Documents\שנה ב\DesignPatterns\project\E\1\Design Pattern Project!\Design Pattern Project!\obj\Debug\net6.0-windows\Design Pattern Project!.AssemblyInfo.cs
+C:\Users\The user\Documents\שנה ב\DesignPatterns\project\E\1\Design Pattern Project!\Design Pattern Project!\obj\Debug\net6.0-windows\Design Pattern Project!.csproj.CoreCompileInputs.cache
+C:\Users\The user\Documents\שנה ב\DesignPatterns\project\E\1\Design Pattern Project!\Design Pattern Project!\obj\Debug\net6.0-windows\Design Pattern Project!.dll
+C:\Users\The user\Documents\שנה ב\DesignPatterns\project\E\1\Design Pattern Project!\Design Pattern Project!\obj\Debug\net6.0-windows\refint\Design Pattern Project!.dll
+C:\Users\The user\Documents\שנה ב\DesignPatterns\project\E\1\Design Pattern Project!\Design Pattern Project!\obj\Debug\net6.0-windows\Design Pattern Project!.pdb
+C:\Users\The user\Documents\שנה ב\DesignPatterns\project\E\1\Design Pattern Project!\Design Pattern Project!\obj\Debug\net6.0-windows\Design Pattern Project!.genruntimeconfig.cache
+C:\Users\The user\Documents\שנה ב\DesignPatterns\project\E\1\Design Pattern Project!\Design Pattern Project!\obj\Debug\net6.0-windows\ref\Design Pattern Project!.dll

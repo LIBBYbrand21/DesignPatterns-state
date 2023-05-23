@@ -4,11 +4,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Design_Pattern_Project_.State
 {
     class ItemDetailesState : MenuState
     {
+        private Form1 form;
+        public ItemDetailesState(Form1 form)
+        {
+            this.form = form;
+        }
         /*   public override void Handle1(MachineMenu mech)
            {
                Console.Write("ConcreteStateB handles request1.");
@@ -24,7 +30,14 @@ namespace Design_Pattern_Project_.State
            }*/
         public override void display()
         {
-            throw new NotImplementedException();
+            form.Snack.Enabled = false;
+            form.Drink.Enabled = false;
+            form.Pastris.Enabled = false;
+            form.CupDrink.Enabled = false;
+            /*form.comboBoxSnack.Enabled = true;
+            form.comboBoxPastris.Enabled = true;
+            form.comboBoxDrink.Enabled = true;
+            form.comboBoxCupDrink.Enabled = true;*/
         }
 
         public override void processPayment()
