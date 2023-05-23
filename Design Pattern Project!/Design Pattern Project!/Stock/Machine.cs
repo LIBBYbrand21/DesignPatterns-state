@@ -15,17 +15,17 @@ namespace Design_Pattern_Project_.Stock
     {
         private Form1 form;
         private MenuState currentState;
-        private Menu items;
-
+/*        private Menu items;
+*/
         public Machine(Form1 form)
         {
             this.form = form;
-            items = new Menu();
+            /*items = new Menu();*/
             CreateComBox();
         }
         private void CreateComBox()
         {
-            foreach (var itemEntry in items.inventoryDrink)
+            foreach (var itemEntry in Menu.inventoryDrink)
             {
                 /* Item item = itemEntry.Key;
                  string itemName = item.Name;
@@ -37,7 +37,7 @@ namespace Design_Pattern_Project_.Stock
                 {
                 }*/
             }
-            foreach (var itemEntry in items.inventoryPastris)
+            foreach (var itemEntry in Menu.inventoryPastris)
             {
                 /* Item item = itemEntry.Key;
                  string itemName = item.Name;
@@ -48,54 +48,47 @@ namespace Design_Pattern_Project_.Stock
                 {
                 }*/
             }
-            foreach (var itemEntry in items.inventoryCupDrink)
+            foreach (var itemEntry in Menu.inventoryCupDrink)
             {
                 /*Item item = itemEntry.Key;
                 string itemName = item.Name;
                 double itemPrice = item.Price;
                 string itemDetails = $"{itemName} - {itemPrice:C2}";*/
                 form.comboBoxCupDrink.Items.Add(itemEntry.Key);
-                /*                form.comboBoxCupDrink.Items.Add(itemDetails);
-                */                /*if (itemEntry.Value < 1)
-                                {
-                                }*/
             }
-            foreach (var itemEntry in items.inventorySnack)
+            foreach (var itemEntry in Menu.inventorySnack)
             {
-
                 form.comboBoxSnack.Items.Add(itemEntry.Key);
-                /*                form.comboBoxSnack.Items.Add(itemDetails);
-                */                /*if (itemEntry.Value < 1)
-                                {
-                                }*/
             }
         }
-        public void SelectedText(string selectedItem)
+        public void SelectedText(string selectedItem, Dictionary<Item, int> inventory)
         {
-            foreach (var itemEntry in items.inventorySnack)
+            foreach (var itemEntry in /*items.inventorySnack*/inventory)
             {
                 Item item = itemEntry.Key;
 
                 if (selectedItem == item.ToString())
                 {
-
                     if (itemEntry.Value < 0)
                     {
                         MessageBox.Show("אין מספיק במלאי, הנך מוחזר לתפריט הקודם");
-                        //itemdetails.desplay();
+                        // comboBox הוא trueכאן צריך לוודא איזה 
+                        //והוא עדיין נותן להם לפעול????????????
+                        form.comboBoxSnack.Enabled = false;
+                        form.comboBoxCupDrink.Enabled = false;
+                        form.comboBoxPastris.Enabled = false;
+                        form.comboBoxDrink.Enabled = false;
+                        form.homePageState.display();
                         break;
                     }
                     else
                     {
                         MessageBox.Show($"{itemEntry.Value}");
-                        items.inventorySnack[item] -= 1;
-                        MessageBox.Show($"{items.inventorySnack[item]}");
+                        inventory[item] -= 1;
+                        MessageBox.Show($"{inventory[item]}");
+                        form.homePageState.display();
+                        form.comboBoxSnack.Enabled = false;
                     }
-                    // itemEntry.Value -= 1;
-
-
-
-
                 }
             }
         }
