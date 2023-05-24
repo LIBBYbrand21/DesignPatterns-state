@@ -10,7 +10,7 @@ namespace Design_Pattern_Project_
     {
         public HomePageState homePageState;
         private ItemDetailesState itemDetails;
-        public PaymentState paymentState;
+        private PaymentState paymentState;
         private string choosenPackage;
 
         Machine machine;
@@ -19,6 +19,7 @@ namespace Design_Pattern_Project_
             InitializeComponent();
             homePageState = new HomePageState(this);
             itemDetails = new ItemDetailesState(this);
+            paymentState = new PaymentState(this);
             machine = new Machine(this);
         }
 
@@ -73,25 +74,7 @@ namespace Design_Pattern_Project_
             machine.SelectedText(selectedItem, Menu.inventorySnack);
         }
 
-        private void comboBoxCupDrink_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (comboBoxCupDrink.SelectedIndex >= 0)
-            {
-                string selectedItem = comboBoxCupDrink.Items[comboBoxCupDrink.SelectedIndex].ToString();
-                MessageBox.Show(selectedItem);
-                machine.SelectedText(selectedItem, Menu.inventoryCupDrink);
-                // Rest of your code using the selected item
-            }
-            else
-            {
-                throw new Exception("nnn");
-                // Handle the case when no item is selected
-                // Display an error message or perform appropriate actions
-            }
-            // string selectedItem = comboBoxCupDrink.Items[comboBoxCupDrink.SelectedIndex].ToString();
-           
-            
-        }
+       
 
         private void comboBoxDrink_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -104,7 +87,7 @@ namespace Design_Pattern_Project_
         {
             choosenPackage=giftButton.Checked.ToString();
             GiftDecorator giftDecorator = new GiftDecorator(machine.objectSelectedItems);
-            toPayLabel.Text = $"{giftDecorator.TotalPrice:c2}";
+            toPayLabel.Text = $"{machine.objectSelectedItems.TotalPrice:c2}";
             paymentState.processPayment();
 
         }
@@ -113,7 +96,7 @@ namespace Design_Pattern_Project_
         {
             choosenPackage = bagButton.Checked.ToString();
             BagDecorator bagDecorator = new BagDecorator(machine.objectSelectedItems);
-            toPayLabel.Text = $"{bagDecorator.TotalPrice:c2}";
+            toPayLabel.Text = $"{machine.objectSelectedItems.TotalPrice:c2}";
             paymentState.processPayment();
 
         }

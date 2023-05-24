@@ -34,7 +34,7 @@ namespace Design_Pattern_Project_.State
         public override void processPayment()
         {
             form.cardButton.Enabled = true;
-            form.cardButton.Enabled = true;
+            form.cashButton.Enabled = true;
             Console.WriteLine("ConcreteState Item Detailes display items");
         }
 
