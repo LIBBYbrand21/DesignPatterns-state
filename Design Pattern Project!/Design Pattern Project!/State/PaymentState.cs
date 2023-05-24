@@ -23,6 +23,8 @@ namespace Design_Pattern_Project_.State
             form.comboBoxCupDrink.Enabled=false;
             form.giftButton.Enabled = true;
             form.bagButton.Enabled = true;
+            form.noPackageButton.Enabled = true;
+
             Console.WriteLine("ConcreteState Item Detailes display items");
         }
         public override void endOrder()
@@ -35,6 +37,8 @@ namespace Design_Pattern_Project_.State
         {
             form.cardButton.Enabled = true;
             form.cashButton.Enabled = true;
+            form.noPackageButton.Enabled = true;
+
             Console.WriteLine("ConcreteState Item Detailes display items");
         }
 

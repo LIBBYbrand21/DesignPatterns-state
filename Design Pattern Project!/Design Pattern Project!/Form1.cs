@@ -56,6 +56,7 @@ namespace Design_Pattern_Project_
         private void paymentButton_Click(object sender, EventArgs e)
         {
             paymentState.display();
+            paymentButton.Enabled = false;
         }
        
 
@@ -90,6 +91,7 @@ namespace Design_Pattern_Project_
             paymentState.processPayment();
             giftButton.Enabled = false;
             bagButton.Enabled = false;
+            noPackageButton.Enabled = false;
 
         }
 
@@ -101,6 +103,8 @@ namespace Design_Pattern_Project_
             paymentState.processPayment();
             giftButton.Enabled = false;
             bagButton.Enabled = false;
+            noPackageButton.Enabled = false;
+
 
         }
 
@@ -125,6 +129,14 @@ namespace Design_Pattern_Project_
             cashtextBox.Visible=true;
             cashButton.Enabled = false;
             cardButton.Enabled = false;
+        }
+
+        private void noPackageButton_CheckedChanged(object sender, EventArgs e)
+        {
+            paymentState.processPayment();
+            giftButton.Enabled = false;
+            bagButton.Enabled = false;
+            noPackageButton.Enabled = false;
         }
     }
 }
