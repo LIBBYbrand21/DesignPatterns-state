@@ -70,7 +70,7 @@ namespace Design_Pattern_Project_.Stock
 
                 if (selectedItem == item.ToString())
                 {
-                    if (itemEntry.Value < 0)
+                    if (itemEntry.Value <= 0)
                     {
                         MessageBox.Show("אין מספיק במלאי, הנך מוחזר לתפריט הקודם");
                         // comboBox הוא trueכאן צריך לוודא איזה 

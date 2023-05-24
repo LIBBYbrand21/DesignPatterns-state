@@ -57,10 +57,7 @@ namespace Design_Pattern_Project_
         {
             paymentState.display();
         }
-        private void cardButton_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void comboBoxPastris_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -91,6 +88,8 @@ namespace Design_Pattern_Project_
             GiftDecorator giftDecorator = new GiftDecorator(machine.objectSelectedItems);
             toPayLabel.Text = $"{machine.objectSelectedItems.TotalPrice:c2}";
             paymentState.processPayment();
+            giftButton.Enabled = false;
+            bagButton.Enabled = false;
 
         }
 
@@ -100,6 +99,8 @@ namespace Design_Pattern_Project_
             BagDecorator bagDecorator = new BagDecorator(machine.objectSelectedItems);
             toPayLabel.Text = $"{machine.objectSelectedItems.TotalPrice:c2}";
             paymentState.processPayment();
+            giftButton.Enabled = false;
+            bagButton.Enabled = false;
 
         }
 
@@ -108,6 +109,22 @@ namespace Design_Pattern_Project_
             string selectedItem = comboBoxCupDrink.Items[comboBoxCupDrink.SelectedIndex].ToString();
             MessageBox.Show(selectedItem);
             machine.SelectedText(selectedItem, Menu.inventoryCupDrink);
+        }
+
+        private void cardButton_CheckedChanged_1(object sender, EventArgs e)
+        {
+            payLabel.Visible = true;
+            payLabel.Text = "העבר/הנח כרטיס";
+            cashButton.Enabled = false;
+            cardButton.Enabled = false;
+        }
+        private void cashButton_CheckedChanged(object sender, EventArgs e)
+        {
+            payLabel.Visible = true;
+            payLabel.Text = "הכנס כסף";
+            cashtextBox.Visible=true;
+            cashButton.Enabled = false;
+            cardButton.Enabled = false;
         }
     }
 }
