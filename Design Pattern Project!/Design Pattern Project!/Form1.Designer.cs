@@ -45,6 +45,9 @@
             this.toPayLabel = new System.Windows.Forms.Label();
             this.selasLabel = new System.Windows.Forms.Label();
             this.itemsLabel = new System.Windows.Forms.Label();
+            this.payment = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cashtextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // Snack
@@ -135,7 +138,7 @@
             // 
             // startButton
             // 
-            this.startButton.Location = new System.Drawing.Point(257, 3);
+            this.startButton.Location = new System.Drawing.Point(305, 2);
             this.startButton.Name = "startButton";
             this.startButton.Size = new System.Drawing.Size(165, 35);
             this.startButton.TabIndex = 11;
@@ -146,7 +149,7 @@
             // paymentButton
             // 
             this.paymentButton.Enabled = false;
-            this.paymentButton.Location = new System.Drawing.Point(635, 127);
+            this.paymentButton.Location = new System.Drawing.Point(633, 119);
             this.paymentButton.Name = "paymentButton";
             this.paymentButton.Size = new System.Drawing.Size(155, 36);
             this.paymentButton.TabIndex = 13;
@@ -158,12 +161,12 @@
             // 
             this.giftButton.AutoSize = true;
             this.giftButton.Enabled = false;
-            this.giftButton.Location = new System.Drawing.Point(635, 217);
+            this.giftButton.Location = new System.Drawing.Point(633, 184);
             this.giftButton.Name = "giftButton";
-            this.giftButton.Size = new System.Drawing.Size(109, 24);
+            this.giftButton.Size = new System.Drawing.Size(145, 24);
             this.giftButton.TabIndex = 14;
             this.giftButton.TabStop = true;
-            this.giftButton.Text = "אריזת מתנה";
+            this.giftButton.Text = "אריזת מתנה-5שח";
             this.giftButton.UseVisualStyleBackColor = true;
             this.giftButton.CheckedChanged += new System.EventHandler(this.giftButton_CheckedChanged);
             // 
@@ -171,12 +174,12 @@
             // 
             this.bagButton.AutoSize = true;
             this.bagButton.Enabled = false;
-            this.bagButton.Location = new System.Drawing.Point(635, 247);
+            this.bagButton.Location = new System.Drawing.Point(633, 214);
             this.bagButton.Name = "bagButton";
-            this.bagButton.Size = new System.Drawing.Size(71, 24);
+            this.bagButton.Size = new System.Drawing.Size(107, 24);
             this.bagButton.TabIndex = 15;
             this.bagButton.TabStop = true;
-            this.bagButton.Text = "שקית ";
+            this.bagButton.Text = "שקית-1שח ";
             this.bagButton.UseVisualStyleBackColor = true;
             this.bagButton.CheckedChanged += new System.EventHandler(this.bagButton_CheckedChanged);
             // 
@@ -184,7 +187,7 @@
             // 
             this.cashButton.AutoSize = true;
             this.cashButton.Enabled = false;
-            this.cashButton.Location = new System.Drawing.Point(635, 327);
+            this.cashButton.Location = new System.Drawing.Point(633, 293);
             this.cashButton.Name = "cashButton";
             this.cashButton.Size = new System.Drawing.Size(121, 24);
             this.cashButton.TabIndex = 16;
@@ -196,7 +199,7 @@
             // 
             this.cardButton.AutoSize = true;
             this.cardButton.Enabled = false;
-            this.cardButton.Location = new System.Drawing.Point(635, 297);
+            this.cardButton.Location = new System.Drawing.Point(633, 263);
             this.cardButton.Name = "cardButton";
             this.cardButton.Size = new System.Drawing.Size(132, 24);
             this.cardButton.TabIndex = 17;
@@ -207,12 +210,12 @@
             // toPayLabel
             // 
             this.toPayLabel.AutoSize = true;
-            this.toPayLabel.Enabled = false;
-            this.toPayLabel.Location = new System.Drawing.Point(667, 61);
+            this.toPayLabel.Location = new System.Drawing.Point(656, 86);
             this.toPayLabel.Name = "toPayLabel";
             this.toPayLabel.Size = new System.Drawing.Size(100, 20);
             this.toPayLabel.TabIndex = 18;
             this.toPayLabel.Text = "סה\"כ לתשלום";
+            this.toPayLabel.Visible = false;
             // 
             // selasLabel
             // 
@@ -228,17 +231,48 @@
             this.itemsLabel.AutoSize = true;
             this.itemsLabel.Location = new System.Drawing.Point(351, 390);
             this.itemsLabel.Name = "itemsLabel";
+            this.itemsLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.itemsLabel.Size = new System.Drawing.Size(119, 20);
             this.itemsLabel.TabIndex = 20;
             this.itemsLabel.Text = "-רשימת המוצרים";
-            this.itemsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.itemsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.itemsLabel.Visible = false;
+            // 
+            // payment
+            // 
+            this.payment.AutoSize = true;
+            this.payment.Enabled = false;
+            this.payment.Location = new System.Drawing.Point(657, 55);
+            this.payment.Name = "payment";
+            this.payment.Size = new System.Drawing.Size(110, 20);
+            this.payment.TabIndex = 21;
+            this.payment.Text = "-סה\"כ לתשלום ";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(673, 346);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 20);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "label1";
+            // 
+            // cashtextBox
+            // 
+            this.cashtextBox.Location = new System.Drawing.Point(633, 387);
+            this.cashtextBox.Name = "cashtextBox";
+            this.cashtextBox.Size = new System.Drawing.Size(123, 27);
+            this.cashtextBox.TabIndex = 23;
+            this.cashtextBox.Text = "הכנס כסף";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 451);
+            this.Controls.Add(this.cashtextBox);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.payment);
             this.Controls.Add(this.itemsLabel);
             this.Controls.Add(this.selasLabel);
             this.Controls.Add(this.toPayLabel);
@@ -281,5 +315,8 @@
         public Label toPayLabel;
         public Label selasLabel;
         public Label itemsLabel;
+        public Label payment;
+        private Label label1;
+        private TextBox cashtextBox;
     }
 }

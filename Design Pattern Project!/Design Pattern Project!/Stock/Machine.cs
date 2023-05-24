@@ -93,7 +93,8 @@ namespace Design_Pattern_Project_.Stock
                         objectSelectedItems.Items.Add(itemEntry.Key);
 
                         objectSelectedItems.TotalPrice += itemEntry.Key.Price;
-                        form.toPayLabel.Enabled = true;
+                        form.payment.Enabled = true;
+                        form.toPayLabel.Visible = true;
                         form.toPayLabel.Text = $"{objectSelectedItems.TotalPrice:c2}";
                         form.itemsLabel.Text += "* " + item.Name.ToString();
                         form.homePageState.display();
