@@ -45,5 +45,15 @@ namespace Design_Pattern_Project_.BuilderItem
             //await Task.Delay(1000);
             drink.Text += "\nadd milk jam";
         }
+        public virtual /*async Task*/void AddNut()
+        {
+            //await Task.Delay(1000);
+            drink.Text += "\nadd nuts";
+        }
+        public virtual /*async Task*/void AddVanil()
+        {
+            //await Task.Delay(1000);
+            drink.Text += "\nadd vanil";
+        }
     }
 }

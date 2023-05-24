@@ -20,10 +20,13 @@ namespace Design_Pattern_Project_.BuilderItem
             builder.AddMilk();
             await Task.Delay(1000);
             builder.AddMilkJam();
+            await Task.Delay(1000);
+            builder.AddNut();
+            builder.AddVanil();
             await Task.Delay(500);
             form.homePageState.display();
             form.paymentButton.Enabled = true;
-            await Task.Delay(500);
+            await Task.Delay(4000);
             form.makingDrinks.Visible = false;
         }
     }

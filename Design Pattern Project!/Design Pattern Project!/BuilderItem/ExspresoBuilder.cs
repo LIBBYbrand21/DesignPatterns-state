@@ -7,7 +7,7 @@ using static System.Windows.Forms.LinkLabel;
 
 namespace Design_Pattern_Project_.BuilderItem
 {
-    public class InstantCoffee : DrinkBuilder
+    public class ExpresoBuilder : DrinkBuilder
     {
     }
 }

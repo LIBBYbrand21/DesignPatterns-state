@@ -7,7 +7,11 @@ using static System.Windows.Forms.LinkLabel;
 
 namespace Design_Pattern_Project_.BuilderItem
 {
-    public class Expreso : DrinkBuilder
+    public class IceNutsBuilder : DrinkBuilder
     {
+        public override void AddVanil()
+        {
+            // no vanil for ice nut
+        }
     }
 }

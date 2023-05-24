@@ -7,15 +7,15 @@ using static System.Windows.Forms.LinkLabel;
 
 namespace Design_Pattern_Project_.BuilderItem
 {
-    public class ChocolateBuilder : DrinkBuilder
+    public class CappuccinoBuilder : DrinkBuilder
     {
         public override void AddVanil()
         {
-            // no vanil for chocolate
+            // no vanil for cappuccino
         }
         public override void AddNut()
         {
-            // no nuts for chocolate
+            // no nuts for cappuccino
         }
     }
 }
