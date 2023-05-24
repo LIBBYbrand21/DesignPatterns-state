@@ -38,8 +38,10 @@ namespace Design_Pattern_Project_
         }
         private void Pastris_Click(object sender, EventArgs e)
         {
-            comboBoxPastris.Enabled = true;
-            itemDetails.display();
+            MessageBox.Show("אינו זמין כרגע");
+            homePageState.display();
+            /*comboBoxPastris.Enabled = true;
+            itemDetails.display();*/
         }
         private void Drink_Click(object sender, EventArgs e)
         {
