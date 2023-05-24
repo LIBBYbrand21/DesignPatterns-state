@@ -56,7 +56,7 @@ namespace Design_Pattern_Project_
         private void paymentButton_Click(object sender, EventArgs e)
         {
             paymentState.display();
-            paymentButton.Enabled = false;
+           
         }
        
 
@@ -98,7 +98,7 @@ namespace Design_Pattern_Project_
         private void bagButton_CheckedChanged(object sender, EventArgs e)
         {
             choosenPackage = bagButton.Checked.ToString();
-            BagDecorator bagDecorator = new BagDecorator(machine.objectSelectedItems);
+           // BagDecorator bagDecorator = new BagDecorator(machine.objectSelectedItems);
             toPayLabel.Text = $"{machine.objectSelectedItems.TotalPrice:c2}";
             paymentState.processPayment();
             giftButton.Enabled = false;
@@ -121,6 +121,7 @@ namespace Design_Pattern_Project_
             payLabel.Text = "העבר/הנח כרטיס";
             cashButton.Enabled = false;
             cardButton.Enabled = false;
+            paymentButton.Enabled=false;
         }
         private void cashButton_CheckedChanged(object sender, EventArgs e)
         {
@@ -137,6 +138,11 @@ namespace Design_Pattern_Project_
             giftButton.Enabled = false;
             bagButton.Enabled = false;
             noPackageButton.Enabled = false;
+        }
+
+        private void Form1_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

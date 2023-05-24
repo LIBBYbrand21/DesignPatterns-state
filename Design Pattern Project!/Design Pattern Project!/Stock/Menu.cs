@@ -42,7 +42,7 @@ namespace DesignPatternsProject.Stock
         };
         public static Dictionary<Item, int> inventoryCupDrink = new()
         {
-           {new NotReadyItem(){ Name = "צ'וקולטה", Price = 7.5,DrinkBuilder=new ChocolateBuilder() } , 20},
+           {new NotReadyItem(){ Name = "צ'וקולטה", Price = 7.5,DrinkBuilder=new ChocolateBuilder() } , 2},
             {new NotReadyItem(){ Name = "קפה שחור", Price = 10.5 ,DrinkBuilder=new BlackCoffeeBuilder()}, 20},
             {new NotReadyItem() { Name = "קפה נמס", Price = 10.5,DrinkBuilder=new InstantCoffeeBuilder() }, 20},
             { new NotReadyItem()  { Name = "קפה הפוך", Price = 7.5 ,DrinkBuilder=new CappuccinoBuilder()}, 10},
@@ -65,7 +65,6 @@ namespace DesignPatternsProject.Stock
             { new ReadyItem() { Name = "צ'יטוס פיצה", Price = 6.0 }, 15},
             { new ReadyItem() { Name = "פריכיות אורז בשוקולד", Price = 6.5 }, 10},
             { new ReadyItem() { Name = "נשנושים", Price = 8.5 }, 20},
-            { new ReadyItem() { Name = "שוגי", Price = 2.5 }, 20},
             { new ReadyItem() { Name = "שוגי", Price = 2.5 }, 20},
             { new ReadyItem() { Name = "פסק זמן", Price = 3.5 }, 20},
             { new ReadyItem() { Name = "שוקולד חלבי עילית", Price = 5.5 }, 20},

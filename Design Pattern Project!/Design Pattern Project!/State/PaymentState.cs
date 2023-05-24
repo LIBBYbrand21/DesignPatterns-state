@@ -24,6 +24,8 @@ namespace Design_Pattern_Project_.State
             form.giftButton.Enabled = true;
             form.bagButton.Enabled = true;
             form.noPackageButton.Enabled = true;
+            //form.paymentButton.Enabled = false;
+
 
             Console.WriteLine("ConcreteState Item Detailes display items");
         }
@@ -37,7 +39,7 @@ namespace Design_Pattern_Project_.State
         {
             form.cardButton.Enabled = true;
             form.cashButton.Enabled = true;
-            form.noPackageButton.Enabled = true;
+            //form.noPackageButton.Enabled = true;
 
             Console.WriteLine("ConcreteState Item Detailes display items");
         }

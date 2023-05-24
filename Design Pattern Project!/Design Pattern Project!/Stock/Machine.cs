@@ -119,13 +119,15 @@ namespace Design_Pattern_Project_.Stock
                             form.paymentButton.Enabled = true;
                         }
                         //
-/*                        form.homePageState.display();
-*/                        form.comboBoxSnack.Enabled = false;
+                        /*                        form.homePageState.display();
+                        */
+                        form.comboBoxSnack.Enabled = false;
                         form.comboBoxCupDrink.Enabled = false;
                         form.comboBoxDrink.Enabled = false;
                         form.comboBoxPastris.Enabled = false;
-/*                        form.paymentButton.Enabled = true;
-*/                    }
+                        /*                        form.paymentButton.Enabled = true;
+                        */
+                    }
                 }
             }
         }
@@ -153,36 +155,40 @@ namespace Design_Pattern_Project_.Stock
         {
             currentState = new PaymentState(form);
         }
-        
+        public void AA()
+        {
+
+        }
+
     }
 
 
-/*    //Builder
-    public class PaymentDirector
-    {
-        public void Construct(IPaymentBuilder builder)
+    /*    //Builder
+        public class PaymentDirector
         {
-            builder.BuildPaymentMethod();
-            builder.BuildPaymentAmount();
+            public void Construct(IPaymentBuilder builder)
+            {
+                builder.BuildPaymentMethod();
+                builder.BuildPaymentAmount();
+            }
         }
-    }
 
-    // Client code
-    public class Client
-    {
-        public void Main()
+        // Client code
+        public class Client
         {
-            var director = new PaymentDirector();
-            var creditBuilder = new CreditPaymentBuilder();
-            var cashBuilder = new CashPaymentBuilder();
+            public void Main()
+            {
+                var director = new PaymentDirector();
+                var creditBuilder = new CreditPaymentBuilder();
+                var cashBuilder = new CashPaymentBuilder();
 
-            director.Construct(creditBuilder);
-            var creditPayment = creditBuilder.GetResult();
-            creditPayment.ProcessPayment();
+                director.Construct(creditBuilder);
+                var creditPayment = creditBuilder.GetResult();
+                creditPayment.ProcessPayment();
 
-            director.Construct(cashBuilder);
-            var cashPayment = cashBuilder.GetResult();
-            cashPayment.ProcessPayment();
-        }
-    }*/
+                director.Construct(cashBuilder);
+                var cashPayment = cashBuilder.GetResult();
+                cashPayment.ProcessPayment();
+            }
+        }*/
 }
