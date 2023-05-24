@@ -1,4 +1,5 @@
-﻿using DesignPatternsProject.AbstractFactory.prop;
+﻿using Design_Pattern_Project_.Stock;
+using DesignPatternsProject.AbstractFactory.prop;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,11 +10,13 @@ namespace DesignPatternsProject.Decorator
 {
     public class BagDecorator : PackageDecorator
     {
-        public BagDecorator(Item item) : base(item)
+        public BagDecorator(ObjectItems objectSelectedItems) : base(objectSelectedItems)
         {
-            this.Name = item.Name + " (in a bag)";
-            this.Price += 0.5;
-            this.Description = item.Description + " (in a bag)";
+            foreach (var item in decoratedObject.Items)
+            {
+                item.Description += " (in a bag)";
+            }
+            decoratedObject.TotalPrice += 1.0;
         }
     }
 }

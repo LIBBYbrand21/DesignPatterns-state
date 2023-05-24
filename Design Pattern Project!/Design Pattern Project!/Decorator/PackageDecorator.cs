@@ -1,4 +1,5 @@
-﻿using DesignPatternsProject.AbstractFactory.prop;
+﻿using Design_Pattern_Project_.Stock;
+using DesignPatternsProject.AbstractFactory.prop;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,15 +8,15 @@ using System.Threading.Tasks;
 
 namespace DesignPatternsProject.Decorator
 {
-    public abstract class PackageDecorator:Item
+    public abstract class PackageDecorator: ObjectItems
     {
-        protected Item item;
+        protected ObjectItems decoratedObject;
 
-        public PackageDecorator(Item item)
+        public PackageDecorator(ObjectItems objectSelectedItems)
         {
-            this.item = item;
+            this.decoratedObject = objectSelectedItems; 
         }
 
-        public override double Price { get => item.Price + base.Price; set => base.Price = value; }
+        
     }
 }

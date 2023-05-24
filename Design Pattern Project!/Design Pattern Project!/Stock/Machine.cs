@@ -15,15 +15,12 @@ namespace Design_Pattern_Project_.Stock
     {
         private Form1 form;
         private MenuState currentState;
-        List<Item> selectedItems;
-        public double totalPrice;
+        public ObjectItems objectSelectedItems = new ObjectItems();
 
-        
+
         public Machine(Form1 form)
         {
             this.form = form;
-            totalPrice = 0;
-            selectedItems = new List<Item>();
             CreateComBox();
         }
         private void CreateComBox()
@@ -86,19 +83,25 @@ namespace Design_Pattern_Project_.Stock
                     }
                     else
                     {
-                       // MessageBox.Show($"{itemEntry.Value}");
+                        if (!form.itemsLabel.Visible)
+                        {
+                            form.itemsLabel.Visible = true;
+                        }
+                        // MessageBox.Show($"{itemEntry.Value}");
                         inventory[item] -= 1;
-                      //  MessageBox.Show($"{inventory[item]}");
-                        selectedItems.Add(itemEntry.Key);
-                        totalPrice += itemEntry.Key.Price;
+                        //  MessageBox.Show($"{inventory[item]}");
+                        objectSelectedItems.Items.Add(itemEntry.Key);
+
+                        objectSelectedItems.TotalPrice += itemEntry.Key.Price;
                         form.toPayLabel.Enabled = true;
-                        form.toPayLabel.Text = $"{totalPrice:c2}";
-                        form.selasLabel.Text += "* " + item.Name.ToString();
+                        form.toPayLabel.Text = $"{objectSelectedItems.TotalPrice:c2}";
+                        form.itemsLabel.Text += "* " + item.Name.ToString();
                         form.homePageState.display();
                         form.comboBoxSnack.Enabled = false;
                         form.comboBoxCupDrink.Enabled = false;
                         form.comboBoxDrink.Enabled = false;
                         form.comboBoxPastris.Enabled = false;
+                        form.paymentButton.Enabled = true;
                     }
                 }
             }
@@ -127,13 +130,11 @@ namespace Design_Pattern_Project_.Stock
         {
             currentState = new PaymentState(form);
         }
+        
     }
-    /* Decorator
-     Item item = new Item { Name = "Item", Price = 10.0, Description = "An item" };
-     Item baggedItem = new BagDecorator(item);
-     Item giftItem = new GiftDecorator(item);*//*
 
-    //Builder
+
+/*    //Builder
     public class PaymentDirector
     {
         public void Construct(IPaymentBuilder builder)

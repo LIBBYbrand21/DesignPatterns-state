@@ -17,6 +17,12 @@ namespace Design_Pattern_Project_.State
         }
         public override void display()
         {
+            form.comboBoxSnack.Enabled = false;
+            form.comboBoxPastris.Enabled = false;
+            form.comboBoxDrink.Enabled = false;
+            form.comboBoxCupDrink.Enabled=false;
+            form.giftButton.Enabled = true;
+            form.bagButton.Enabled = true;
             Console.WriteLine("ConcreteState Item Detailes display items");
         }
         public override void endOrder()
@@ -27,6 +33,8 @@ namespace Design_Pattern_Project_.State
         }
         public override void processPayment()
         {
+            form.cardButton.Enabled = true;
+            form.cardButton.Enabled = true;
             Console.WriteLine("ConcreteState Item Detailes display items");
         }
 

@@ -16,5 +16,10 @@ namespace DesignPatternsProject.AbstractFactory.prop
             return $" {Name} מחיר- {Price:C2}";
             
         }
+
+        public static implicit operator Item(List<Item> v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
