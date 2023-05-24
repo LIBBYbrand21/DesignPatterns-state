@@ -275,6 +275,7 @@
             makingDrinks.Size = new Size(151, 24);
             makingDrinks.TabIndex = 24;
             makingDrinks.Text = "making drinks";
+            makingDrinks.Visible = false;
             // 
             // Form1
             // 
