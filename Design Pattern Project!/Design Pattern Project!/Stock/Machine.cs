@@ -1,4 +1,5 @@
-﻿using Design_Pattern_Project_.State;
+﻿using Design_Pattern_Project_.BuilderItem;
+using Design_Pattern_Project_.State;
 using DesignPatternsProject.AbstractFactory.prop;
 using DesignPatternsProject.Stock;
 using System;
@@ -97,13 +98,34 @@ namespace Design_Pattern_Project_.Stock
                         form.toPayLabel.Visible = true;
                         form.toPayLabel.Text = $"{objectSelectedItems.TotalPrice:c2}";
                         form.itemsLabel.Text += "* " + item.Name.ToString();
-                        form.homePageState.display();
-                        form.comboBoxSnack.Enabled = false;
+                        //
+                        if (itemEntry.Key is NotReadyItem)
+                        {
+                            NotReadyItem NRI = (NotReadyItem)itemEntry.Key;
+                            if (NRI.DrinkBuilder != null)
+                            {
+                                DrinkDirector director = new DrinkDirector();
+                                director.Prepare(NRI.DrinkBuilder, form);
+                            }
+                            else
+                            {
+                                form.homePageState.display();
+                                form.paymentButton.Enabled = true;
+                            }
+                        }
+                        else
+                        {
+                            form.homePageState.display();
+                            form.paymentButton.Enabled = true;
+                        }
+                        //
+/*                        form.homePageState.display();
+*/                        form.comboBoxSnack.Enabled = false;
                         form.comboBoxCupDrink.Enabled = false;
                         form.comboBoxDrink.Enabled = false;
                         form.comboBoxPastris.Enabled = false;
-                        form.paymentButton.Enabled = true;
-                    }
+/*                        form.paymentButton.Enabled = true;
+*/                    }
                 }
             }
         }

@@ -74,7 +74,7 @@ namespace Design_Pattern_Project_
             machine.SelectedText(selectedItem, Menu.inventorySnack);
         }
 
-       
+
 
         private void comboBoxDrink_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -85,7 +85,7 @@ namespace Design_Pattern_Project_
 
         private void giftButton_CheckedChanged(object sender, EventArgs e)
         {
-            choosenPackage=giftButton.Checked.ToString();
+            choosenPackage = giftButton.Checked.ToString();
             GiftDecorator giftDecorator = new GiftDecorator(machine.objectSelectedItems);
             toPayLabel.Text = $"{machine.objectSelectedItems.TotalPrice:c2}";
             paymentState.processPayment();

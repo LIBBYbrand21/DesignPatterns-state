@@ -13,14 +13,10 @@ namespace DesignPatternsProject.AbstractFactory.prop
         {
             Description = "ready item";
         }
-        public ReadyItem(string name,double price)
+        public ReadyItem(string name, double price) : base(name, price)
         {
-            Name = name;
-            Price = price;
             Description = "ready item";
-
         }
-        
         public Item Clone()
         {
             return new ReadyItem

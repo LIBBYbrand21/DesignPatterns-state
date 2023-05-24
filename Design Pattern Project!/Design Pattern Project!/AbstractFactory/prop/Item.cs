@@ -8,9 +8,18 @@ namespace DesignPatternsProject.AbstractFactory.prop
 {
     public abstract class Item
     {
-        public string Name { get; set; }
+        public virtual string Name { get; set; }
         public virtual double Price { get; set; }
-        public string Description { get; set; }
+        public virtual string Description { get; set; }
+        public Item(string name, double price)
+        {
+            Name = name;
+            Price = price;
+        }
+        public Item()
+        {
+
+        }
         public override string ToString()
         {
             return $" {Name} מחיר- {Price:C2}";

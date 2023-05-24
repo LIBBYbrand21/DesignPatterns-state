@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.LinkLabel;
 
-namespace DesignPatternsProject.BuilderItem
+namespace Design_Pattern_Project_.BuilderItem
 {
-    public interface IItemBuilder
+    public class IceVanil : DrinkBuilder
     {
     }
 }

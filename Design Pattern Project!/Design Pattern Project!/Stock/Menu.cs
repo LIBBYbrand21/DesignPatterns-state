@@ -1,4 +1,5 @@
-﻿using DesignPatternsProject.AbstractFactory.prop;
+﻿using Design_Pattern_Project_.BuilderItem;
+using DesignPatternsProject.AbstractFactory.prop;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -41,19 +42,19 @@ namespace DesignPatternsProject.Stock
         };
         public static Dictionary<Item, int> inventoryCupDrink = new()
         {
-            {new NotReadyItem(){ Name = "צ'וקולטה", Price = 7.5 } , 20},
-            {new NotReadyItem(){ Name = "קפה שחור", Price = 10.5 }, 20},
-            {new NotReadyItem() { Name = "קפה נמס", Price = 10.5 }, 20},
-            { new NotReadyItem()  { Name = "קפה הפוך", Price = 7.5 }, 10},
-            { new NotReadyItem() { Name = "אייס קפה", Price = 8.5 }, 20},
-            { new NotReadyItem() { Name = "אייס אגוזים", Price = 8.5 }, 20},
-            { new NotReadyItem() { Name = "אייס פסיפלורה", Price = 5.5 }, 15},
-            { new NotReadyItem() { Name = "אייס וניל", Price = 7.5 }, 10},
-            { new NotReadyItem(){ Name = "ברד ענבים", Price = 5.5 }, 20},
-            { new NotReadyItem() { Name = "ברד פטל", Price = 5.5 }, 20},
-            { new NotReadyItem() { Name = "שייק פירות", Price = 7.5 }, 20},
-            { new NotReadyItem() { Name = "אקספרסו", Price = 8.5 }, 20},
-        };
+           {new NotReadyItem(){ Name = "צ'וקולטה", Price = 7.5,DrinkBuilder=new ChocolateBuilder() } , 20},
+            {new NotReadyItem(){ Name = "קפה שחור", Price = 10.5 ,DrinkBuilder=new BlackCoffeeBuilder()}, 20},
+            {new NotReadyItem() { Name = "קפה נמס", Price = 10.5,DrinkBuilder=new InstantCoffee() }, 20},
+            { new NotReadyItem()  { Name = "קפה הפוך", Price = 7.5 ,DrinkBuilder=new Cappuccino()}, 10},
+            { new NotReadyItem() { Name = "אייס קפה", Price = 8.5 , DrinkBuilder = new IceCoffee()}, 20},
+            { new NotReadyItem() { Name = "אייס אגוזים", Price = 8.5 , DrinkBuilder = new IceNuts()}, 20},
+            //{ new NotReadyItem() { Name = "אייס פסיפלורה", Price = 5.5 , DrinkBuilder = new ChocolateBuilder()}, 15},
+            { new NotReadyItem() { Name = "אייס וניל", Price = 7.5 , DrinkBuilder = new IceVanil()} , 10},
+            //{ new NotReadyItem(){ Name = "ברד ענבים", Price = 5.5 , DrinkBuilder = new ChocolateBuilder()}, 20},
+           // { new NotReadyItem() { Name = "ברד פטל", Price = 5.5 , DrinkBuilder = new ChocolateBuilder()}, 20},
+            //{ new NotReadyItem() { Name = "שייק פירות", Price = 7.5 , DrinkBuilder = new ChocolateBuilder()}, 20},
+            { new NotReadyItem() { Name = "אקספרסו", Price = 8.5 , DrinkBuilder = new Expreso()}, 20},
+           };
         public static Dictionary<Item, int> inventorySnack = new() {
             { new ReadyItem() { Name = "תפוצ'יפס טבעי", Price = 7.5 } , 20},
             { new ReadyItem() { Name = "תפוצ'יפס שמנת בצל", Price = 9.5 }, 20},
