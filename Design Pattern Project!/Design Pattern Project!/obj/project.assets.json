@@ -8,32 +8,36 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\The user\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\משתמש זה\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\The user\\Documents\\שנה ב\\DesignPatterns\\project\\E\\5\\Design Pattern Project!\\Design Pattern Project!\\Design Pattern Project!.csproj",
+      "projectUniqueName": "C:\\Users\\משתמש זה\\Documents\\school work\\project\\‏‏תיקיה חדשה (2)\\Design Pattern Project!\\Design Pattern Project!\\Design Pattern Project!.csproj",
       "projectName": "Design Pattern Project!",
-      "projectPath": "C:\\Users\\The user\\Documents\\שנה ב\\DesignPatterns\\project\\E\\5\\Design Pattern Project!\\Design Pattern Project!\\Design Pattern Project!.csproj",
-      "packagesPath": "C:\\Users\\The user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\The user\\Documents\\שנה ב\\DesignPatterns\\project\\E\\5\\Design Pattern Project!\\Design Pattern Project!\\obj\\",
+      "projectPath": "C:\\Users\\משתמש זה\\Documents\\school work\\project\\‏‏תיקיה חדשה (2)\\Design Pattern Project!\\Design Pattern Project!\\Design Pattern Project!.csproj",
+      "packagesPath": "C:\\Users\\משתמש זה\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\משתמש זה\\Documents\\school work\\project\\‏‏תיקיה חדשה (2)\\Design Pattern Project!\\Design Pattern Project!\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\The user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\משתמש זה\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net6.0-windows"
+        "net6.0-windows7.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -57,8 +61,7 @@
           "net47",
           "net471",
           "net472",
-          "net48",
-          "net481"
+          "net48"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -70,7 +73,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

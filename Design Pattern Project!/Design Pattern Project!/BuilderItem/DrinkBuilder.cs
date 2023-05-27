@@ -33,7 +33,7 @@ namespace Design_Pattern_Project_.BuilderItem
         public virtual/*async Task*/ void AddWater()
         {
             //await Task.Delay(1000);
-            drink.Text += "\nadd watter";
+            drink.Text += "\nadd water";
         }
         public virtual /*async Task*/void AddMilk()
         {

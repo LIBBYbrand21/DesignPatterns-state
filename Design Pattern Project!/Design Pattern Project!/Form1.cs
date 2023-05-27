@@ -98,7 +98,7 @@ namespace Design_Pattern_Project_
         private void bagButton_CheckedChanged(object sender, EventArgs e)
         {
             choosenPackage = bagButton.Checked.ToString();
-           // BagDecorator bagDecorator = new BagDecorator(machine.objectSelectedItems);
+            BagDecorator bagDecorator = new BagDecorator(machine.objectSelectedItems);
             toPayLabel.Text = $"{machine.objectSelectedItems.TotalPrice:c2}";
             paymentState.processPayment();
             giftButton.Enabled = false;
