@@ -155,9 +155,29 @@ namespace Design_Pattern_Project_.Stock
         {
             currentState = new PaymentState(form);
         }
-        public void AA()
+        public void CashPayment()
         {
-
+            if(form.cashtextBox.Text== form.toPayLabel.Text)
+            {
+                EndOfPayment();
+            }
+            else
+            {
+                if (double.Parse(form.cashtextBox.Text) > double.Parse(form.toPayLabel.Text))
+                {
+                    form.payLabel.Text = "{double.Parse(form.cashtextBox.Text) - double.Parse(form.toPayLabel.Text)}";
+                }
+                else
+                {
+                    form.cashtextBox.Text = String.Empty;
+                    form.payLabel.Text = $" הכנס את הסכום המתאים ";
+                }
+            }
+        }
+        public async Task EndOfPayment()
+        {
+            await Task.Delay(1000);
+            MessageBox.Show("התשלום עבר בהצלחה!,תודה");
         }
 
     }

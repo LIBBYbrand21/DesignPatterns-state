@@ -14,6 +14,7 @@ namespace Design_Pattern_Project_
         private string choosenPackage;
 
         Machine machine;
+        
         public Form1()
         {
             InitializeComponent();
@@ -115,13 +116,15 @@ namespace Design_Pattern_Project_
             machine.SelectedText(selectedItem, Menu.inventoryCupDrink);
         }
 
-        private void cardButton_CheckedChanged_1(object sender, EventArgs e)
+        private void  cardButton_CheckedChanged_1(object sender, EventArgs e)
         {
             payLabel.Visible = true;
             payLabel.Text = "העבר/הנח כרטיס";
             cashButton.Enabled = false;
             cardButton.Enabled = false;
             paymentButton.Enabled=false;
+            Task task = machine.EndOfPayment();
+            
         }
         private void cashButton_CheckedChanged(object sender, EventArgs e)
         {
@@ -130,6 +133,8 @@ namespace Design_Pattern_Project_
             cashtextBox.Visible=true;
             cashButton.Enabled = false;
             cardButton.Enabled = false;
+           
+
         }
 
         private void noPackageButton_CheckedChanged(object sender, EventArgs e)
@@ -142,6 +147,12 @@ namespace Design_Pattern_Project_
 
         private void Form1_Load_1(object sender, EventArgs e)
         {
+
+        }
+
+        private void submitButton_Click(object sender, EventArgs e)
+        {
+            machine.CashPayment();
 
         }
     }

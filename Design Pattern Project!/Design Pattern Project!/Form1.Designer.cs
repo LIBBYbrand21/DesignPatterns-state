@@ -50,6 +50,7 @@
             this.cashtextBox = new System.Windows.Forms.TextBox();
             this.makingDrinks = new System.Windows.Forms.Label();
             this.noPackageButton = new System.Windows.Forms.RadioButton();
+            this.submitButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Snack
@@ -264,9 +265,9 @@
             // 
             // cashtextBox
             // 
-            this.cashtextBox.Location = new System.Drawing.Point(633, 387);
+            this.cashtextBox.Location = new System.Drawing.Point(631, 387);
             this.cashtextBox.Name = "cashtextBox";
-            this.cashtextBox.Size = new System.Drawing.Size(123, 27);
+            this.cashtextBox.Size = new System.Drawing.Size(73, 27);
             this.cashtextBox.TabIndex = 23;
             this.cashtextBox.Visible = false;
             // 
@@ -294,11 +295,22 @@
             this.noPackageButton.UseVisualStyleBackColor = true;
             this.noPackageButton.CheckedChanged += new System.EventHandler(this.noPackageButton_CheckedChanged);
             // 
+            // submitButton
+            // 
+            this.submitButton.Location = new System.Drawing.Point(716, 387);
+            this.submitButton.Name = "submitButton";
+            this.submitButton.Size = new System.Drawing.Size(62, 27);
+            this.submitButton.TabIndex = 26;
+            this.submitButton.Text = "אישור";
+            this.submitButton.UseVisualStyleBackColor = true;
+            this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 451);
+            this.Controls.Add(this.submitButton);
             this.Controls.Add(this.noPackageButton);
             this.Controls.Add(this.makingDrinks);
             this.Controls.Add(this.cashtextBox);
@@ -352,5 +364,6 @@
         public TextBox cashtextBox;
         public Label makingDrinks;
         public RadioButton noPackageButton;
+        private Button submitButton;
     }
 }
