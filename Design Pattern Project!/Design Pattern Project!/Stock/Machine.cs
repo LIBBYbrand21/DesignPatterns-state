@@ -163,7 +163,9 @@ namespace Design_Pattern_Project_.Stock
             }
             else
             {
-                if (double.Parse(form.cashtextBox.Text) > double.Parse(form.toPayLabel.Text))
+                double doubleVal = Convert.ToDouble(form.toPayLabel.Text);
+
+                if (Convert.ToDouble(form.cashtextBox.Text) > doubleVal/*Convert.ToDouble(form.toPayLabel.Text)*/)
                 {
                     form.payLabel.Text = "{double.Parse(form.cashtextBox.Text) - double.Parse(form.toPayLabel.Text)}";
                 }
