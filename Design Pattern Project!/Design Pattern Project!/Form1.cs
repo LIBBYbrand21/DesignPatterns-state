@@ -57,7 +57,8 @@ namespace Design_Pattern_Project_
         private void paymentButton_Click(object sender, EventArgs e)
         {
             paymentState.display();
-           
+            itemDetails.display();
+
         }
        
 

@@ -171,7 +171,17 @@ namespace Design_Pattern_Project_.Stock
         }
         public void StartAgain()
         {
-            itemDetailesState.display();
+            form.paymentButton.Enabled = false;
+            form.payLabel.Visible = false;
+            form.cashtextBox.Text = string.Empty;
+            form.cashtextBox.Visible=false;
+            form.submitButton.Visible = false;
+            objectSelectedItems.TotalPrice = 0;
+            objectSelectedItems.Items.Clear();
+            form.toPayLabel.Text = String.Empty;
+            form.itemsLabel.Text= String.Empty;
+            form.payment.Enabled=false;
+            form.startButton.Enabled = true;
         }
 
     }

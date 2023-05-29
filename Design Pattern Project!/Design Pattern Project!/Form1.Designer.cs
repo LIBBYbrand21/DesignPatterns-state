@@ -256,7 +256,7 @@
             // payLabel
             // 
             this.payLabel.AutoSize = true;
-            this.payLabel.Location = new System.Drawing.Point(673, 346);
+            this.payLabel.Location = new System.Drawing.Point(633, 346);
             this.payLabel.Name = "payLabel";
             this.payLabel.Size = new System.Drawing.Size(50, 20);
             this.payLabel.TabIndex = 22;
@@ -365,6 +365,6 @@
         public TextBox cashtextBox;
         public Label makingDrinks;
         public RadioButton noPackageButton;
-        private Button submitButton;
+        public Button submitButton;
     }
 }
