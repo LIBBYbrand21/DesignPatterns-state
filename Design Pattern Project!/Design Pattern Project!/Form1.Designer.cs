@@ -234,7 +234,7 @@
             // itemsLabel
             // 
             this.itemsLabel.AutoSize = true;
-            this.itemsLabel.Location = new System.Drawing.Point(351, 390);
+            this.itemsLabel.Location = new System.Drawing.Point(47, 387);
             this.itemsLabel.Name = "itemsLabel";
             this.itemsLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.itemsLabel.Size = new System.Drawing.Size(119, 20);

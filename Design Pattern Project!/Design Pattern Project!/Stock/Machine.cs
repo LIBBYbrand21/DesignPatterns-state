@@ -148,7 +148,7 @@ namespace Design_Pattern_Project_.Stock
             {
                 if (double.Parse(form.cashtextBox.Text) > objectSelectedItems.TotalPrice)
                 {
-                    form.payLabel.Text = $"{double.Parse(form.cashtextBox.Text) - objectSelectedItems.TotalPrice}";
+                    form.payLabel.Text = $"עודף-{double.Parse(form.cashtextBox.Text) - objectSelectedItems.TotalPrice}";
                     EndOfPayment();
                 }
                 else
@@ -179,7 +179,7 @@ namespace Design_Pattern_Project_.Stock
             objectSelectedItems.TotalPrice = 0;
             objectSelectedItems.Items.Clear();
             form.toPayLabel.Text = String.Empty;
-            form.itemsLabel.Text= String.Empty;
+            form.itemsLabel.Text= $"רשימת המוצרים-";
             form.payment.Enabled=false;
             form.startButton.Enabled = true;
         }
