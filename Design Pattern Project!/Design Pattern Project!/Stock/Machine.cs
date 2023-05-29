@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using System.Globalization;
 
 namespace Design_Pattern_Project_.Stock
 {
@@ -16,6 +17,7 @@ namespace Design_Pattern_Project_.Stock
     {
         private Form1 form;
         private MenuState currentState;
+        ItemDetailesState itemDetailesState;
         public ObjectItems objectSelectedItems = new ObjectItems();
 
 
@@ -28,33 +30,14 @@ namespace Design_Pattern_Project_.Stock
         {
             foreach (var itemEntry in Menu.inventoryDrink)
             {
-                /* Item item = itemEntry.Key;
-                 string itemName = item.Name;
-                 double itemPrice = item.Price;
-                 string itemDetails = $"{itemName} - {itemPrice:C2}";*/
                 form.comboBoxDrink.Items.Add(itemEntry.Key);
-                // form.comboBoxDrink.Items.Add(itemDetails);
-                /*if (itemEntry.Value < 1)
-                {
-                }*/
             }
             foreach (var itemEntry in Menu.inventoryPastris)
             {
-                /* Item item = itemEntry.Key;
-                 string itemName = item.Name;
-                 double itemPrice = item.Price;
-                 string itemDetails = $"{itemName} - {itemPrice:C2}";*/
                 form.comboBoxPastris.Items.Add(itemEntry.Key);
-                /*if (itemEntry.Value < 1)
-                {
-                }*/
             }
             foreach (var itemEntry in Menu.inventoryCupDrink)
             {
-                /*Item item = itemEntry.Key;
-                string itemName = item.Name;
-                double itemPrice = item.Price;
-                string itemDetails = $"{itemName} - {itemPrice:C2}";*/
                 form.comboBoxCupDrink.Items.Add(itemEntry.Key);
             }
             foreach (var itemEntry in Menu.inventorySnack)
@@ -64,7 +47,7 @@ namespace Design_Pattern_Project_.Stock
         }
         public void SelectedText(string selectedItem, Dictionary<Item, int> inventory)
         {
-            foreach (var itemEntry in /*items.inventorySnack*/inventory)
+            foreach (var itemEntry in inventory)
             {
                 Item item = itemEntry.Key;
 
@@ -157,17 +140,16 @@ namespace Design_Pattern_Project_.Stock
         }
         public void CashPayment()
         {
-            if(form.cashtextBox.Text== form.toPayLabel.Text)
+            if (double.Parse(form.cashtextBox.Text) == objectSelectedItems.TotalPrice)
             {
                 EndOfPayment();
             }
             else
             {
-                double doubleVal = Convert.ToDouble(form.toPayLabel.Text);
-
-                if (Convert.ToDouble(form.cashtextBox.Text) > doubleVal/*Convert.ToDouble(form.toPayLabel.Text)*/)
+                if (double.Parse(form.cashtextBox.Text) > objectSelectedItems.TotalPrice)
                 {
-                    form.payLabel.Text = "{double.Parse(form.cashtextBox.Text) - double.Parse(form.toPayLabel.Text)}";
+                    form.payLabel.Text = $"{double.Parse(form.cashtextBox.Text) - objectSelectedItems.TotalPrice}";
+                    EndOfPayment();
                 }
                 else
                 {
@@ -176,10 +158,20 @@ namespace Design_Pattern_Project_.Stock
                 }
             }
         }
+
+
+
         public async Task EndOfPayment()
         {
             await Task.Delay(1000);
             MessageBox.Show("התשלום עבר בהצלחה!,תודה");
+            form.startButton.Enabled = true;
+            StartAgain();
+
+        }
+        public void StartAgain()
+        {
+            itemDetailesState.display();
         }
 
     }

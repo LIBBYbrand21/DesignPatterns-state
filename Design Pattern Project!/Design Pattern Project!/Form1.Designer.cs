@@ -171,8 +171,7 @@
             this.giftButton.TabStop = true;
             this.giftButton.Text = "אריזת מתנה-5שח";
             this.giftButton.UseVisualStyleBackColor = true;
-            //this.giftButton.CheckedChanged += new System.EventHandler(this.giftButton_CheckedChanged);
-            this.giftButton.Click+= new System.EventHandler(this.giftButton_CheckedChanged);
+            this.giftButton.Click += new System.EventHandler(this.giftButton_CheckedChanged);
             // 
             // bagButton
             // 
@@ -185,7 +184,6 @@
             this.bagButton.TabStop = true;
             this.bagButton.Text = "שקית-1שח ";
             this.bagButton.UseVisualStyleBackColor = true;
-            //this.bagButton.CheckedChanged += new System.EventHandler(this.bagButton_CheckedChanged);
             this.bagButton.Click += new System.EventHandler(this.bagButton_CheckedChanged);
             // 
             // cashButton
@@ -199,7 +197,6 @@
             this.cashButton.TabStop = true;
             this.cashButton.Text = "תשלום במזומן";
             this.cashButton.UseVisualStyleBackColor = true;
-            //this.cashButton.CheckedChanged += new System.EventHandler(this.cashButton_CheckedChanged);
             this.cashButton.Click += new System.EventHandler(this.cashButton_CheckedChanged);
             // 
             // cardButton
@@ -213,7 +210,6 @@
             this.cardButton.TabStop = true;
             this.cardButton.Text = "תשלום באשראי";
             this.cardButton.UseVisualStyleBackColor = true;
-            //this.cardButton.CheckedChanged += new System.EventHandler(this.cardButton_CheckedChanged_1);
             this.cardButton.Click += new System.EventHandler(this.cardButton_CheckedChanged_1);
             // 
             // toPayLabel
@@ -297,7 +293,6 @@
             this.noPackageButton.TabStop = true;
             this.noPackageButton.Text = "ללא אריזה";
             this.noPackageButton.UseVisualStyleBackColor = true;
-            //this.noPackageButton.CheckedChanged += new System.EventHandler(this.noPackageButton_CheckedChanged);
             this.noPackageButton.Click += new System.EventHandler(this.noPackageButton_CheckedChanged);
             // 
             // submitButton
@@ -308,6 +303,7 @@
             this.submitButton.TabIndex = 26;
             this.submitButton.Text = "אישור";
             this.submitButton.UseVisualStyleBackColor = true;
+            this.submitButton.Visible = false;
             this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
             // 
             // Form1

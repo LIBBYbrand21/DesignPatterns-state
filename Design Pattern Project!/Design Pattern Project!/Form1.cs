@@ -107,6 +107,7 @@ namespace Design_Pattern_Project_
             noPackageButton.Enabled = false;
 
 
+
         }
 
         private void comboBoxCupDrink_SelectedIndexChanged_1(object sender, EventArgs e)
@@ -133,6 +134,7 @@ namespace Design_Pattern_Project_
             cashtextBox.Visible=true;
             cashButton.Enabled = false;
             cardButton.Enabled = false;
+            submitButton.Visible=true;
            
 
         }
