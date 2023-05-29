@@ -148,7 +148,7 @@ namespace Design_Pattern_Project_.Stock
             {
                 if (double.Parse(form.cashtextBox.Text) > objectSelectedItems.TotalPrice)
                 {
-                    form.payLabel.Text = $"עודף-{double.Parse(form.cashtextBox.Text) - objectSelectedItems.TotalPrice}";
+                    form.payLabel.Text = $"עודף-{double.Parse(form.cashtextBox.Text) - objectSelectedItems.TotalPrice:c2}";
                     EndOfPayment();
                 }
                 else
