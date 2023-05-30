@@ -21,6 +21,7 @@ namespace Design_Pattern_Project_.Stock
         private Form1 form;
         public MenuState currentState;
         ItemDetailesState itemDetailesState;
+        private PaymentState paymentState;
         public ObjectItems objectSelectedItems = new ObjectItems();
         string s = "-בתאבון";
 
@@ -30,6 +31,8 @@ namespace Design_Pattern_Project_.Stock
             CreateComBox();
             currentState = new HomePageState(form);
             reportFormat = new TextReport();
+            paymentState = new PaymentState(form);
+
         }
         private void CreateComBox()
         {
@@ -162,6 +165,19 @@ namespace Design_Pattern_Project_.Stock
             form.payment.Enabled = false;
             form.startButton.Enabled = true;
             s = " בתאבון-  ";
+        }
+        public void Packaging()
+        {
+            form.giftButton.Enabled = false;
+            form.bagButton.Enabled = false;
+            form.noPackageButton.Enabled = false;
+            form.toPayLabel.Text = $"{objectSelectedItems.TotalPrice:c2}";
+            paymentState.processPayment();
+        }
+        public void Paying()
+        {
+            form.cashButton.Enabled = false;
+            form.cardButton.Enabled = false;
         }
         public void UpdateState(string nextState)
         {

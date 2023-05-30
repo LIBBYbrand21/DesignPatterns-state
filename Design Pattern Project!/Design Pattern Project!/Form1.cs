@@ -29,6 +29,7 @@ namespace Design_Pattern_Project_
         private void startButton_Click(object sender, EventArgs e)
         {
             machine.currentState.display();
+            selasLabel.Text = machine.currentState.display();
             machine.currentState = new HomePageState(this);
         }
         private void CupDrink_Click(object sender, EventArgs e)
@@ -36,7 +37,7 @@ namespace Design_Pattern_Project_
             comboBoxCupDrink.Enabled = true;
             string nextState = machine.SelectItem();
             machine.UpdateState(nextState);
-            itemDetails.display();
+            machine.currentState.display();
         }
         private void Pastris_Click(object sender, EventArgs e)
         {
@@ -50,23 +51,21 @@ namespace Design_Pattern_Project_
             comboBoxDrink.Enabled = true;
             string nextState = machine.SelectItem();
             machine.UpdateState(nextState);
-            itemDetails.display();
+            machine.currentState.display();
         }
         private void Snack_Click(object sender, EventArgs e)
         {
             comboBoxSnack.Enabled = true;
             string nextState = machine.SelectItem();
             machine.UpdateState(nextState);
-            itemDetails.display();
+            machine.currentState.display();
         }
         private void paymentButton_Click(object sender, EventArgs e)
         {
-            //machine.TransitionTo(paymentState);
-            //machine.currentState.display();
-            itemDetails.display();
+            machine.currentState.display();
             string nextState = machine.ProcessPayment();
             machine.UpdateState(nextState);
-            paymentState.display();
+            machine.currentState.display();
         }
         private void comboBoxPastris_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -88,23 +87,13 @@ namespace Design_Pattern_Project_
         }
         private void giftButton_CheckedChanged(object sender, EventArgs e)
         {
-            choosenPackage = giftButton.Checked.ToString();
             GiftDecorator giftDecorator = new GiftDecorator(machine.objectSelectedItems);
-            toPayLabel.Text = $"{machine.objectSelectedItems.TotalPrice:c2}";
-            paymentState.processPayment();
-            giftButton.Enabled = false;
-            bagButton.Enabled = false;
-            noPackageButton.Enabled = false;
+            machine.Packaging();
         }
         private void bagButton_CheckedChanged(object sender, EventArgs e)
         {
-            choosenPackage = bagButton.Checked.ToString();
             BagDecorator bagDecorator = new BagDecorator(machine.objectSelectedItems);
-            toPayLabel.Text = $"{machine.objectSelectedItems.TotalPrice:c2}";
-            paymentState.processPayment();
-            giftButton.Enabled = false;
-            bagButton.Enabled = false;
-            noPackageButton.Enabled = false;
+            machine.Packaging();
         }
         private void comboBoxCupDrink_SelectedIndexChanged_1(object sender, EventArgs e)
         {
@@ -114,9 +103,7 @@ namespace Design_Pattern_Project_
         }
         private void cardButton_CheckedChanged_1(object sender, EventArgs e)
         {
-            cashButton.Enabled = false;
-            cardButton.Enabled = false;
-            paymentButton.Enabled = false;
+            machine.Paying();
             paymentContext.SetPaymentStrategy(new CreditCardPaymentStrategy(this));
             machine.Pay(paymentContext);
             machine.FinishOrder();
@@ -127,17 +114,15 @@ namespace Design_Pattern_Project_
             payLabel.Visible = true;
             payLabel.Text = "הכנס כסף";
             cashtextBox.Visible = true;
-            cashButton.Enabled = false;
-            cardButton.Enabled = false;
             submitButton.Visible = true;
-        }
+            machine.Paying();
 
+        }
+        }
         private void noPackageButton_CheckedChanged(object sender, EventArgs e)
         {
-            paymentState.processPayment();
-            giftButton.Enabled = false;
-            bagButton.Enabled = false;
-            noPackageButton.Enabled = false;
+            machine.Packaging();
+
         }
         private void submitButton_Click(object sender, EventArgs e)
         {
