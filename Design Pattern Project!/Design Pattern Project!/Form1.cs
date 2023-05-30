@@ -118,7 +118,6 @@ namespace Design_Pattern_Project_
             machine.Paying();
 
         }
-        }
         private void noPackageButton_CheckedChanged(object sender, EventArgs e)
         {
             machine.Packaging();
