@@ -43,7 +43,7 @@ namespace DesignPatternsProject.Observer
         {
             using (StreamWriter writer = new(filePath, true))
             {
-                writer.WriteLine($" Name: {item.Name}, Price: {item.Price}, Description: {item.Description}\n");
+                writer.WriteLine($" Name: {item.Name}, Price: {item.Price}, Description: {item.Description}, Time: {DateTime.Now}\n");
                 writer.Close();
                 writer.Dispose();
             }
