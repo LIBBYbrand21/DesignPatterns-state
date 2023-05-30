@@ -41,3 +41,9 @@
 
  Name: קפה הפוך, Price: 7.5, Description: Not Ready Item (as a gift)
 
+ Name: קפה שחור, Price: 10.5, Description: Not Ready Item (as a gift)
+
+ Name: ג'אמפ מנגו, Price: 12.5, Description: ready item (as a gift)
+
+ Name: קוקה קולה דיאט, Price: 9.9, Description: ready item (in a bag)
+

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Design_Pattern_Project_.Strategy
 {
     public class CreditCardPaymentStrategy : IPaymentStrategy
-    {
+    { 
         private Form1 form;
         public CreditCardPaymentStrategy(Form1 form)
         {
@@ -20,6 +20,7 @@ namespace Design_Pattern_Project_.Strategy
             Task.Delay(1000).Wait();
             form.payLabel.Visible = false;
             MessageBox.Show("התשלום עבר בהצלחה!,תודה");
+            IPaymentStrategy.isPaySuccess = true;
         }
     }
 }

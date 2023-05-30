@@ -17,12 +17,10 @@ namespace Design_Pattern_Project_.Strategy
         {
             this.paymentStrategy = paymentStrategy;
         }
-
         public void SetPaymentStrategy(IPaymentStrategy paymentStrategy)
         {
             this.paymentStrategy = paymentStrategy;
         }
-
         public void PerformPayment(double amount)
         {
             paymentStrategy.Pay(amount);

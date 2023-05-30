@@ -8,6 +8,8 @@ namespace Design_Pattern_Project_.Strategy
 {
     public class CashPaymentStrategy : IPaymentStrategy
     {
+/*        public static bool isPaySuccess;
+*/
         private Form1 form;
         public CashPaymentStrategy(Form1 form)
         {
@@ -15,6 +17,11 @@ namespace Design_Pattern_Project_.Strategy
         }
         public void Pay(double amount)
         {
+            //הבדיקה שצריך לבצע כאן היא האם הקלט הוא אכן מספר
+            if (form.cashtextBox.Text == "")
+            {
+                form.cashtextBox.Text = "0";
+            }
             if (double.Parse(form.cashtextBox.Text) == amount)
             {
                 form.payLabel.Visible = false;
@@ -23,6 +30,7 @@ namespace Design_Pattern_Project_.Strategy
                 Task.Delay(1000).Wait();
                 form.payLabel.Visible = false;
                 MessageBox.Show("התשלום עבר בהצלחה!,תודה");
+                IPaymentStrategy.isPaySuccess = true;
             }
             else
             {
@@ -35,11 +43,13 @@ namespace Design_Pattern_Project_.Strategy
                     Task.Delay(1000).Wait();
                     form.payLabel.Visible = false;
                     MessageBox.Show("התשלום עבר בהצלחה!,תודה");
+                    IPaymentStrategy.isPaySuccess = true;
                 }
                 else
                 {
                     form.cashtextBox.Text = String.Empty;
                     form.payLabel.Text = $" הכנס את הסכום המתאים ";
+                    IPaymentStrategy.isPaySuccess = false;
                 }
             }
         }
