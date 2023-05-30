@@ -1,0 +1,3 @@
+ Name: קוקה קולה דיאט, Price: 9.9, Description: ready item
+ Name: דוריטוס חמוץ חריף, Price: 5.5, Description: ready item
+ Name: בירה, Price: 12, Description: ready item (in a bag)

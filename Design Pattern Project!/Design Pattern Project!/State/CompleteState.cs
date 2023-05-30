@@ -15,22 +15,19 @@ namespace Design_Pattern_Project_.State
         {
             this.form = form;
         }
-        public override void display()
+        public override string display()
         {
             throw new NotImplementedException();
         }
-
-        public override void endOrder()
+        public override string endOrder()
         {
             throw new NotImplementedException();
         }
-
-        public override void processPayment()
+        public override string processPayment()
         {
             throw new NotImplementedException();
         }
-
-        public override void selectItem()
+        public override string selectItem()
         {
             throw new NotImplementedException();
         }

@@ -9,13 +9,9 @@ namespace Design_Pattern_Project_.State
 {
    public abstract class MenuState
     {
-        public abstract void display();
-
-        public abstract void selectItem();
-
-        public abstract void processPayment();
-
-        public abstract void endOrder();
-
+        public abstract string display();
+        public abstract string selectItem();
+        public abstract string processPayment();
+        public abstract string endOrder();
     }
 }

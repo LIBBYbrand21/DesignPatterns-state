@@ -15,7 +15,7 @@ namespace Design_Pattern_Project_.State
         {
             this.form = form;
         }
-        public override void display()
+        public override string display()
         {
             form.comboBoxSnack.Enabled = false;
             form.comboBoxPastris.Enabled = false;
@@ -25,28 +25,29 @@ namespace Design_Pattern_Project_.State
             form.bagButton.Enabled = true;
             form.noPackageButton.Enabled = true;
             //form.paymentButton.Enabled = false;
-
-
-            Console.WriteLine("ConcreteState Item Detailes display items");
+            //Console.WriteLine("ConcreteState Item Detailes display items");
+            return "ConcreteState Item Detailes display items";
         }
-        public override void endOrder()
+        public override string endOrder()
         {
             MenuState state = new CompleteState(form);
-            machine.TransitionTo(state);
-            Console.WriteLine("ConcreteState Item Detailes display items");
+           // machine.TransitionTo(state);
+            //Console.WriteLine("ConcreteState Item Detailes display items");
+            return "ConcreteState Item Detailes display items";
         }
-        public override void processPayment()
+        public override string processPayment()
         {
             form.cardButton.Enabled = true;
             form.cashButton.Enabled = true;
             //form.noPackageButton.Enabled = true;
-
-            Console.WriteLine("ConcreteState Item Detailes display items");
+            //Console.WriteLine("ConcreteState Item Detailes display items");
+            return "ConcreteState Item Detailes display items";
         }
 
-        public override void selectItem()
+        public override string selectItem()
         {
-            Console.WriteLine("ConcreteState Item Detailes display items");
+            //Console.WriteLine("ConcreteState Item Detailes display items");
+            return "ConcreteState Item Detailes display items";
         }
     }
 }

@@ -16,30 +16,33 @@ namespace Design_Pattern_Project_.State
         {
             this.form = form;
         }
-        public override void display()
+        public override string display()
         {
             form.Snack.Enabled = false;
             form.Drink.Enabled = false;
             form.Pastris.Enabled = false;
             form.CupDrink.Enabled = false;
 
-            Console.WriteLine("ConcreteState Item Detailes display items");
+            // Console.WriteLine("ConcreteState Item Detailes display items");
+            return "ConcreteState Item Detailes display items";
 
         }
-        public override void endOrder()
+        public override string endOrder()
         {
-            Console.WriteLine("ConcreteState Item Detailes,can't  end the order");
+            //Console.WriteLine("ConcreteState Item Detailes,can't  end the order");
+            return "ConcreteState Item Detailes,can't  end the order";
         }
-
-        public override void processPayment()
+        public override string processPayment()
         {
-            Console.WriteLine("ConcreteState Item Detailes,can't  pay");
+            //Console.WriteLine("ConcreteState Item Detailes,can't  pay");
+            return "ConcreteState Item Detailes,can't  pay";
         }
-        public override void selectItem()
+        public override string selectItem()
         {
             MenuState state = new PaymentState(form);
             machine.TransitionTo(state);
-            Console.WriteLine("ConcreteState Item Detailes select Item");
+            // Console.WriteLine("ConcreteState Item Detailes select Item");
+            return "ConcreteState Item Detailes select Item";
         }
     }
 }

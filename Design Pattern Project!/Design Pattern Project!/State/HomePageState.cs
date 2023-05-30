@@ -12,41 +12,36 @@ namespace Design_Pattern_Project_.State
     {
         private Form1 form;
         private Machine machine;
-
-
         public HomePageState(Form1 form)
         {
             this.form = form;
         }
-        public override void display()
+        public override string display()
         {
             form.startButton.Enabled = false;
             form.Snack.Enabled = true;
             form.Drink.Enabled = true;
             form.Pastris.Enabled=true;
             form.CupDrink.Enabled = true;
-           /* MenuState state = new ItemDetailesState(form);
-            machine. TransitionTo(state);*/
-            Console.WriteLine("ConcreteState home page display");
+            /* MenuState state = new ItemDetailesState(form);
+             machine. TransitionTo(state);*/
+            //Console.WriteLine("ConcreteState home page display");
+            return "ConcreteState home page display";
         }
-
-        public override void selectItem()
+        public override string selectItem()
         {
-            Console.WriteLine("ConcreteState home page,can't  select items ");
+            //Console.WriteLine("ConcreteState home page,can't  select items ");
+            return "ConcreteState home page,can't  select items ";
         }
-
-        public override void processPayment()
+        public override string processPayment()
         {
-            Console.WriteLine("ConcreteState home page,can't  pay");
-
+            //Console.WriteLine("ConcreteState home page,can't  pay");
+            return "ConcreteState home page,can't  pay";
         }
-
-        public override void endOrder()
+        public override string endOrder()
         {
-            Console.WriteLine("ConcreteState home page,can't  end the order");
-
+            //Console.WriteLine("ConcreteState home page,can't  end the order");
+            return "ConcreteState home page,can't  end the order";
         }
-
-
     }
 }

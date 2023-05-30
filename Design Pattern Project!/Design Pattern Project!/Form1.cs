@@ -30,61 +30,59 @@ namespace Design_Pattern_Project_
         }
         private void startButton_Click(object sender, EventArgs e)
         {
-            homePageState.display();
+            machine.currentState.display();
         }
         private void CupDrink_Click(object sender, EventArgs e)
         {
             comboBoxCupDrink.Enabled = true;
-            itemDetails.display();
+            machine.TransitionTo(itemDetails);
+            machine.currentState.display();
+
         }
         private void Pastris_Click(object sender, EventArgs e)
         {
             MessageBox.Show("אינו זמין כרגע");
+            machine.TransitionTo(itemDetails);
+            // machine.currentState.display();
+            //comboBoxPastris.Enabled = true;
             homePageState.display();
-            /*comboBoxPastris.Enabled = true;
-            itemDetails.display();*/
+            //itemDetails.display();
         }
         private void Drink_Click(object sender, EventArgs e)
         {
             comboBoxDrink.Enabled = true;
-            itemDetails.display();
+            machine.TransitionTo(itemDetails);
+            machine.currentState.display();
         }
         private void Snack_Click(object sender, EventArgs e)
         {
             comboBoxSnack.Enabled = true;
-            itemDetails.display();
+            machine.TransitionTo(itemDetails);
+            machine.currentState.display();
         }
         private void paymentButton_Click(object sender, EventArgs e)
         {
-            paymentState.display();
-            itemDetails.display();
-
+            machine.TransitionTo(paymentState);
+            machine.currentState.display();
         }
-       
-
         private void comboBoxPastris_SelectedIndexChanged(object sender, EventArgs e)
         {
             string selectedItem = comboBoxPastris.Items[comboBoxPastris.SelectedIndex].ToString();
             MessageBox.Show(selectedItem);
-            machine.SelectedText(selectedItem, Menu.inventoryPastris);
-
+            machine.SelecteItem(selectedItem, Menu.inventoryPastris);
         }
         private void comboBoxSnack_SelectedIndexChanged(object sender, EventArgs e)
         {
             string selectedItem = comboBoxSnack.Items[comboBoxSnack.SelectedIndex].ToString();
             MessageBox.Show(selectedItem);
-            machine.SelectedText(selectedItem, Menu.inventorySnack);
+            machine.SelecteItem(selectedItem, Menu.inventorySnack);
         }
-
-
-
         private void comboBoxDrink_SelectedIndexChanged(object sender, EventArgs e)
         {
             string selectedItem = comboBoxDrink.Items[comboBoxDrink.SelectedIndex].ToString();
             MessageBox.Show(selectedItem);
-            machine.SelectedText(selectedItem, Menu.inventoryDrink);
+            machine.SelecteItem(selectedItem, Menu.inventoryDrink);
         }
-
         private void giftButton_CheckedChanged(object sender, EventArgs e)
         {
             choosenPackage = giftButton.Checked.ToString();
@@ -94,9 +92,7 @@ namespace Design_Pattern_Project_
             giftButton.Enabled = false;
             bagButton.Enabled = false;
             noPackageButton.Enabled = false;
-
         }
-
         private void bagButton_CheckedChanged(object sender, EventArgs e)
         {
             choosenPackage = bagButton.Checked.ToString();
@@ -106,18 +102,13 @@ namespace Design_Pattern_Project_
             giftButton.Enabled = false;
             bagButton.Enabled = false;
             noPackageButton.Enabled = false;
-
-
-
         }
-
         private void comboBoxCupDrink_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             string selectedItem = comboBoxCupDrink.Items[comboBoxCupDrink.SelectedIndex].ToString();
             MessageBox.Show(selectedItem);
-            machine.SelectedText(selectedItem, Menu.inventoryCupDrink);
+            machine.SelecteItem(selectedItem, Menu.inventoryCupDrink);
         }
-
         private void  cardButton_CheckedChanged_1(object sender, EventArgs e)
         {
             payLabel.Visible = true;

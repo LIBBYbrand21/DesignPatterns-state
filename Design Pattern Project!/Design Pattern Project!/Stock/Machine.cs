@@ -10,21 +10,25 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 using System.Globalization;
+using DesignPatternsProject.Observer;
 
 namespace Design_Pattern_Project_.Stock
 {
     public class Machine
     {
+        private IReport reportFormat;
         private Form1 form;
-        private MenuState currentState;
+        public MenuState currentState;
         ItemDetailesState itemDetailesState;
         public ObjectItems objectSelectedItems = new ObjectItems();
-
+        string s = "-בתאבון";
 
         public Machine(Form1 form)
         {
             this.form = form;
             CreateComBox();
+            currentState = new HomePageState(form);
+            reportFormat = new TextReport();
         }
         private void CreateComBox()
         {
@@ -45,7 +49,7 @@ namespace Design_Pattern_Project_.Stock
                 form.comboBoxSnack.Items.Add(itemEntry.Key);
             }
         }
-        public void SelectedText(string selectedItem, Dictionary<Item, int> inventory)
+        public void SelecteItem(string selectedItem, Dictionary<Item, int> inventory)
         {
             foreach (var itemEntry in inventory)
             {
@@ -56,12 +60,6 @@ namespace Design_Pattern_Project_.Stock
                     if (itemEntry.Value <= 0)
                     {
                         MessageBox.Show("אין מספיק במלאי, הנך מוחזר לתפריט הקודם");
-                        // comboBox הוא trueכאן צריך לוודא איזה 
-                        //והוא עדיין נותן להם לפעול????????????
-                        form.comboBoxSnack.Enabled = false;
-                        form.comboBoxCupDrink.Enabled = false;
-                        form.comboBoxPastris.Enabled = false;
-                        form.comboBoxDrink.Enabled = false;
                         form.homePageState.display();
                         break;
                     }
@@ -81,7 +79,7 @@ namespace Design_Pattern_Project_.Stock
                         form.toPayLabel.Visible = true;
                         form.toPayLabel.Text = $"{objectSelectedItems.TotalPrice:c2}";
                         form.itemsLabel.Text += "* " + item.Name.ToString();
-                        //
+
                         if (itemEntry.Key is NotReadyItem)
                         {
                             NotReadyItem NRI = (NotReadyItem)itemEntry.Key;
@@ -101,15 +99,12 @@ namespace Design_Pattern_Project_.Stock
                             form.homePageState.display();
                             form.paymentButton.Enabled = true;
                         }
-                        //
-                        /*                        form.homePageState.display();
-                        */
+
                         form.comboBoxSnack.Enabled = false;
                         form.comboBoxCupDrink.Enabled = false;
                         form.comboBoxDrink.Enabled = false;
                         form.comboBoxPastris.Enabled = false;
-                        /*                        form.paymentButton.Enabled = true;
-                        */
+
                     }
                 }
             }
@@ -130,14 +125,18 @@ namespace Design_Pattern_Project_.Stock
         {
             currentState.processPayment();
         }
-        public void ChangeToItemDetailsState()
+        public string EndOrder()
+        {
+            return currentState.endOrder();
+        } 
+        /*public void ChangeToItemDetailsState()
         {
             currentState = new ItemDetailesState(form);
         }
         public void ChangeToPaymentState()
         {
             currentState = new PaymentState(form);
-        }
+        }*/
         public void CashPayment()
         {
             if (double.Parse(form.cashtextBox.Text) == objectSelectedItems.TotalPrice)
@@ -158,30 +157,34 @@ namespace Design_Pattern_Project_.Stock
                 }
             }
         }
-
-
-
         public async Task EndOfPayment()
         {
             await Task.Delay(1000);
             MessageBox.Show("התשלום עבר בהצלחה!,תודה");
             form.startButton.Enabled = true;
+            foreach(var item in objectSelectedItems.Items)
+            {
+                s += $"{item.Name},";
+                reportFormat.DailyUpdate(item);
+            }
+            MessageBox.Show(s);
+            form.selasLabel.Text = EndOrder();
             StartAgain();
-
         }
         public void StartAgain()
         {
             form.paymentButton.Enabled = false;
             form.payLabel.Visible = false;
             form.cashtextBox.Text = string.Empty;
-            form.cashtextBox.Visible=false;
+            form.cashtextBox.Visible = false;
             form.submitButton.Visible = false;
             objectSelectedItems.TotalPrice = 0;
             objectSelectedItems.Items.Clear();
             form.toPayLabel.Text = String.Empty;
-            form.itemsLabel.Text= $"רשימת המוצרים-";
-            form.payment.Enabled=false;
+            form.itemsLabel.Text = $"רשימת המוצרים-";
+            form.payment.Enabled = false;
             form.startButton.Enabled = true;
+            s = "-בתאבון";
         }
 
     }

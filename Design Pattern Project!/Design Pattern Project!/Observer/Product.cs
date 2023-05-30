@@ -11,24 +11,12 @@ namespace DesignPatternsProject.Observer
         public string Name { get; set; }    
         private int inventoryCount;
         private List<Supplier> suppliers;
-
         public Product(string name, int initialCount)
         {
             Name = name;
             inventoryCount = initialCount;
             suppliers = new List<Supplier>();
         }
-
-        public void AddSupplier(Supplier supplier)
-        {
-            suppliers.Add(supplier);
-        }
-
-        public void RemoveSupplier(Supplier supplier)
-        {
-            suppliers.Remove(supplier);
-        }
-
         public void DecrementInventory(int count)
         {
             inventoryCount -= count;
@@ -37,7 +25,6 @@ namespace DesignPatternsProject.Observer
                 NotifySuppliers();
             }
         }
-
         private void NotifySuppliers()
         {
             foreach (var supplier in suppliers)
