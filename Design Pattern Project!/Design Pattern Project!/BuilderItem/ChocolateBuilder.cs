@@ -34,7 +34,7 @@ namespace Design_Pattern_Project_.BuilderItem
         }
         public override void AddPicture()
         {
-            Image image1 = Image.FromFile("C:\\Users\\The user\\Documents\\שנה ב\\DesignPatterns\\project\\E\\9\\images\\capuchino.jpg");
+            Image image1 = Image.FromFile(@"..\..\..\..\..\images\capuchino.jpg");
             //drink.Size = new Size(image1.Width, image1.Height);
             drink.Image = image1;
         }
