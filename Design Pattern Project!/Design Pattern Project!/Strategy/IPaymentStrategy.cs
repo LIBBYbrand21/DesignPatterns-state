@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DesignPatternsProject.Builder
+namespace Design_Pattern_Project_.Strategy
 {
-    public interface IPayment
+    public interface IPaymentStrategy
     {
-        void ProcessPayment();
+        void Pay(double amount);
     }
 }

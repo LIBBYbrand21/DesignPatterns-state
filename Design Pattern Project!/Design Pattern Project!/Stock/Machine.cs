@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Xml.Linq;
 using System.Globalization;
 using DesignPatternsProject.Observer;
+using Design_Pattern_Project_.Strategy;
 
 namespace Design_Pattern_Project_.Stock
 {
@@ -128,7 +129,7 @@ namespace Design_Pattern_Project_.Stock
         public string EndOrder()
         {
             return currentState.endOrder();
-        } 
+        }
         /*public void ChangeToItemDetailsState()
         {
             currentState = new ItemDetailesState(form);
@@ -137,32 +138,14 @@ namespace Design_Pattern_Project_.Stock
         {
             currentState = new PaymentState(form);
         }*/
-        public void CashPayment()
+        public void Pay(PaymentContext paymentContext)
         {
-            if (double.Parse(form.cashtextBox.Text) == objectSelectedItems.TotalPrice)
-            {
-                EndOfPayment();
-            }
-            else
-            {
-                if (double.Parse(form.cashtextBox.Text) > objectSelectedItems.TotalPrice)
-                {
-                    form.payLabel.Text = $"עודף-{double.Parse(form.cashtextBox.Text) - objectSelectedItems.TotalPrice:c2}";
-                    EndOfPayment();
-                }
-                else
-                {
-                    form.cashtextBox.Text = String.Empty;
-                    form.payLabel.Text = $" הכנס את הסכום המתאים ";
-                }
-            }
+            paymentContext.PerformPayment(objectSelectedItems.TotalPrice);
         }
-        public async Task EndOfPayment()
+        public void FinishOrder()
         {
-            await Task.Delay(1000);
-            MessageBox.Show("התשלום עבר בהצלחה!,תודה");
             form.startButton.Enabled = true;
-            foreach(var item in objectSelectedItems.Items)
+            foreach (var item in objectSelectedItems.Items)
             {
                 s += $"{item.Name},";
                 reportFormat.DailyUpdate(item);
@@ -174,48 +157,18 @@ namespace Design_Pattern_Project_.Stock
         public void StartAgain()
         {
             form.paymentButton.Enabled = false;
-            form.payLabel.Visible = false;
             form.cashtextBox.Text = string.Empty;
             form.cashtextBox.Visible = false;
             form.submitButton.Visible = false;
             objectSelectedItems.TotalPrice = 0;
             objectSelectedItems.Items.Clear();
+            form.itemsLabel.Visible = false;
             form.toPayLabel.Text = String.Empty;
             form.itemsLabel.Text = $"רשימת המוצרים-";
             form.payment.Enabled = false;
             form.startButton.Enabled = true;
-            s = "-בתאבון";
+            s = " בתאבון-  ";
         }
 
     }
-
-
-    /*    //Builder
-        public class PaymentDirector
-        {
-            public void Construct(IPaymentBuilder builder)
-            {
-                builder.BuildPaymentMethod();
-                builder.BuildPaymentAmount();
-            }
-        }
-
-        // Client code
-        public class Client
-        {
-            public void Main()
-            {
-                var director = new PaymentDirector();
-                var creditBuilder = new CreditPaymentBuilder();
-                var cashBuilder = new CashPaymentBuilder();
-
-                director.Construct(creditBuilder);
-                var creditPayment = creditBuilder.GetResult();
-                creditPayment.ProcessPayment();
-
-                director.Construct(cashBuilder);
-                var cashPayment = cashBuilder.GetResult();
-                cashPayment.ProcessPayment();
-            }
-        }*/
 }

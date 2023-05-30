@@ -18,6 +18,10 @@ namespace Design_Pattern_Project_.State
         }
         public override string display()
         {
+            form.comboBoxDrink.Text = String.Empty;
+            form.comboBoxCupDrink.Text = String.Empty;
+            form.comboBoxPastris.Text = String.Empty;
+            form.comboBoxSnack.Text = String.Empty;
             form.Snack.Enabled = false;
             form.Drink.Enabled = false;
             form.Pastris.Enabled = false;

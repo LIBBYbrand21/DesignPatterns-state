@@ -1,5 +1,6 @@
 using Design_Pattern_Project_.State;
 using Design_Pattern_Project_.Stock;
+using Design_Pattern_Project_.Strategy;
 using DesignPatternsProject.AbstractFactory.prop;
 using DesignPatternsProject.Decorator;
 using DesignPatternsProject.Stock;
@@ -12,9 +13,10 @@ namespace Design_Pattern_Project_
         private ItemDetailesState itemDetails;
         private PaymentState paymentState;
         private string choosenPackage;
+        PaymentContext paymentContext;
 
         Machine machine;
-        
+
         public Form1()
         {
             InitializeComponent();
@@ -22,48 +24,48 @@ namespace Design_Pattern_Project_
             itemDetails = new ItemDetailesState(this);
             paymentState = new PaymentState(this);
             machine = new Machine(this);
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
+            paymentContext = new PaymentContext();
         }
         private void startButton_Click(object sender, EventArgs e)
         {
+            homePageState.display();
             machine.currentState.display();
         }
         private void CupDrink_Click(object sender, EventArgs e)
         {
             comboBoxCupDrink.Enabled = true;
-            machine.TransitionTo(itemDetails);
-            machine.currentState.display();
-
+            /*machine.TransitionTo(itemDetails);
+            machine.currentState.display();*/
+            itemDetails.display();
         }
         private void Pastris_Click(object sender, EventArgs e)
         {
             MessageBox.Show("אינו זמין כרגע");
-            machine.TransitionTo(itemDetails);
+            // machine.TransitionTo(itemDetails);
             // machine.currentState.display();
             //comboBoxPastris.Enabled = true;
             homePageState.display();
-            //itemDetails.display();
         }
         private void Drink_Click(object sender, EventArgs e)
         {
             comboBoxDrink.Enabled = true;
-            machine.TransitionTo(itemDetails);
-            machine.currentState.display();
+            /* machine.TransitionTo(itemDetails);
+             machine.currentState.display();*/
+            itemDetails.display();
         }
         private void Snack_Click(object sender, EventArgs e)
         {
             comboBoxSnack.Enabled = true;
-            machine.TransitionTo(itemDetails);
-            machine.currentState.display();
+            /*machine.TransitionTo(itemDetails);
+            machine.currentState.display();*/
+            itemDetails.display();
         }
         private void paymentButton_Click(object sender, EventArgs e)
         {
-            machine.TransitionTo(paymentState);
-            machine.currentState.display();
+            //machine.TransitionTo(paymentState);
+            //machine.currentState.display();
+            itemDetails.display();
+            paymentState.display();
         }
         private void comboBoxPastris_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -109,26 +111,24 @@ namespace Design_Pattern_Project_
             MessageBox.Show(selectedItem);
             machine.SelecteItem(selectedItem, Menu.inventoryCupDrink);
         }
-        private void  cardButton_CheckedChanged_1(object sender, EventArgs e)
+        private void cardButton_CheckedChanged_1(object sender, EventArgs e)
         {
-            payLabel.Visible = true;
-            payLabel.Text = "העבר/הנח כרטיס";
             cashButton.Enabled = false;
             cardButton.Enabled = false;
-            paymentButton.Enabled=false;
-            Task task = machine.EndOfPayment();
-            
+            paymentButton.Enabled = false;
+            paymentContext.SetPaymentStrategy(new CreditCardPaymentStrategy(this));
+            machine.Pay(paymentContext);
+           machine.FinishOrder();
         }
         private void cashButton_CheckedChanged(object sender, EventArgs e)
         {
+            paymentContext.SetPaymentStrategy(new CashPaymentStrategy(this));
             payLabel.Visible = true;
             payLabel.Text = "הכנס כסף";
-            cashtextBox.Visible=true;
+            cashtextBox.Visible = true;
             cashButton.Enabled = false;
             cardButton.Enabled = false;
-            submitButton.Visible=true;
-           
-
+            submitButton.Visible = true;
         }
 
         private void noPackageButton_CheckedChanged(object sender, EventArgs e)
@@ -138,16 +138,10 @@ namespace Design_Pattern_Project_
             bagButton.Enabled = false;
             noPackageButton.Enabled = false;
         }
-
-        private void Form1_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void submitButton_Click(object sender, EventArgs e)
         {
-            machine.CashPayment();
-
+            machine.Pay(paymentContext);
+            machine.FinishOrder();
         }
     }
 }

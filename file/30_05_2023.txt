@@ -1,3 +1,43 @@
  Name: קוקה קולה דיאט, Price: 9.9, Description: ready item
  Name: דוריטוס חמוץ חריף, Price: 5.5, Description: ready item
  Name: בירה, Price: 12, Description: ready item (in a bag)
+ Name: דוריטוס חריף אש, Price: 5.5, Description: ready item
+ Name: ג'אמפ תות בננה, Price: 10, Description: ready item
+ Name: תפוצ'יפס שמנת בצל, Price: 9.5, Description: ready item (in a bag)
+ Name: דוריטוס חמוץ חריף, Price: 5.5, Description: ready item (in a bag)
+ Name: תפוצ'יפס שמנת בצל, Price: 9.5, Description: ready item (as a gift)
+ Name: מים בטעמים-ענבים, Price: 7.5, Description: ready item (as a gift)
+ Name: ספרייט, Price: 9.5, Description: ready item (as a gift)
+
+ Name: תפוצ'יפס שמנת בצל, Price: 9.5, Description: ready item (as a gift)
+
+ Name: דוריטוס טבעי, Price: 8.5, Description: ready item (as a gift)
+
+ Name: קוקה קולה דיאט, Price: 9.9, Description: ready item (as a gift)
+
+ Name: קוקה קולה דיאט, Price: 9.9, Description: ready item (as a gift)
+
+ Name: ספרייט, Price: 9.5, Description: ready item (in a bag)
+
+ Name: ג'אמפ תות בננה, Price: 10, Description: ready item (as a gift)
+
+ Name: קוקה קולה דיאט, Price: 9.9, Description: ready item (as a gift)
+
+ Name: קוקה קולה דיאט, Price: 9.9, Description: ready item
+
+ Name: דוריטוס חמוץ חריף, Price: 5.5, Description: ready item
+
+ Name: קוקה קולה דיאט, Price: 9.9, Description: ready item (as a gift)
+
+ Name: ג'אמפ תות בננה, Price: 10, Description: ready item (as a gift)
+
+ Name: ג'אמפ תות בננה, Price: 10, Description: ready item (in a bag)
+
+ Name: קוקה קולה דיאט, Price: 9.9, Description: ready item (as a gift)
+
+ Name: קפה שחור, Price: 10.5, Description: Not Ready Item (as a gift)
+
+ Name: ג'אמפ מנגו, Price: 12.5, Description: ready item (as a gift)
+
+ Name: קפה הפוך, Price: 7.5, Description: Not Ready Item (as a gift)
+
