@@ -28,36 +28,35 @@ namespace Design_Pattern_Project_
         }
         private void startButton_Click(object sender, EventArgs e)
         {
-            homePageState.display();
             machine.currentState.display();
+            machine.currentState = new HomePageState(this);
         }
         private void CupDrink_Click(object sender, EventArgs e)
         {
             comboBoxCupDrink.Enabled = true;
-            /*machine.TransitionTo(itemDetails);
-            machine.currentState.display();*/
+            string nextState = machine.SelectItem();
+            machine.UpdateState(nextState);
             itemDetails.display();
         }
         private void Pastris_Click(object sender, EventArgs e)
         {
             MessageBox.Show("אינו זמין כרגע");
-            // machine.TransitionTo(itemDetails);
-            // machine.currentState.display();
-            //comboBoxPastris.Enabled = true;
+            string nextState = machine.SelectItem();
+            machine.UpdateState(nextState);
             homePageState.display();
         }
         private void Drink_Click(object sender, EventArgs e)
         {
             comboBoxDrink.Enabled = true;
-            /* machine.TransitionTo(itemDetails);
-             machine.currentState.display();*/
+            string nextState = machine.SelectItem();
+            machine.UpdateState(nextState);
             itemDetails.display();
         }
         private void Snack_Click(object sender, EventArgs e)
         {
             comboBoxSnack.Enabled = true;
-            /*machine.TransitionTo(itemDetails);
-            machine.currentState.display();*/
+            string nextState = machine.SelectItem();
+            machine.UpdateState(nextState);
             itemDetails.display();
         }
         private void paymentButton_Click(object sender, EventArgs e)
@@ -65,6 +64,8 @@ namespace Design_Pattern_Project_
             //machine.TransitionTo(paymentState);
             //machine.currentState.display();
             itemDetails.display();
+            string nextState = machine.ProcessPayment();
+            machine.UpdateState(nextState);
             paymentState.display();
         }
         private void comboBoxPastris_SelectedIndexChanged(object sender, EventArgs e)

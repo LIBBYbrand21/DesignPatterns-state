@@ -114,30 +114,23 @@ namespace Design_Pattern_Project_.Stock
         {
             currentState = state;
         }
-        public void Display()
+        public string Display()
         {
-            currentState.display();
+           return currentState.display();
         }
-        public void SelectItem()
+        public string SelectItem()
         {
-            currentState.selectItem();
+           return  currentState.selectItem();
         }
-        public void ProcessPayment()
+        public string ProcessPayment()
         {
-            currentState.processPayment();
+           return currentState.processPayment();
         }
         public string EndOrder()
         {
             return currentState.endOrder();
         }
-        /*public void ChangeToItemDetailsState()
-        {
-            currentState = new ItemDetailesState(form);
-        }
-        public void ChangeToPaymentState()
-        {
-            currentState = new PaymentState(form);
-        }*/
+     
         public void Pay(PaymentContext paymentContext)
         {
             paymentContext.PerformPayment(objectSelectedItems.TotalPrice);
@@ -151,7 +144,8 @@ namespace Design_Pattern_Project_.Stock
                 reportFormat.DailyUpdate(item);
             }
             MessageBox.Show(s);
-            form.selasLabel.Text = EndOrder();
+            string nextState = EndOrder();
+            UpdateState(nextState);
             StartAgain();
         }
         public void StartAgain()
@@ -168,6 +162,23 @@ namespace Design_Pattern_Project_.Stock
             form.payment.Enabled = false;
             form.startButton.Enabled = true;
             s = " בתאבון-  ";
+        }
+        public void UpdateState(string nextState)
+        {
+            form.selasLabel.Text = nextState;
+
+            if (nextState == "Item Selection State Entered")
+            {
+                TransitionTo(new ItemDetailesState(form));
+            }
+            else if (nextState == "Payment Processing State Entered")
+            {
+                TransitionTo(new PaymentState(form));
+            }
+            else if (nextState == "Order Completion State Entered")
+            {
+                TransitionTo(new CompleteState(form));
+            }
         }
 
     }
