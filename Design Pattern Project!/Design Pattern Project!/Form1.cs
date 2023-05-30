@@ -106,7 +106,7 @@ namespace Design_Pattern_Project_
             machine.Paying();
             paymentContext.SetPaymentStrategy(new CreditCardPaymentStrategy(this));
             machine.Pay(paymentContext);
-            machine.FinishOrder();
+            machine.FinishingOrder();
         }
         private void cashButton_CheckedChanged(object sender, EventArgs e)
         {
@@ -128,7 +128,7 @@ namespace Design_Pattern_Project_
             machine.Pay(paymentContext);
             if (IPaymentStrategy.isPaySuccess)
             {
-                machine.FinishOrder();
+                machine.FinishingOrder();
             }
         }
     }

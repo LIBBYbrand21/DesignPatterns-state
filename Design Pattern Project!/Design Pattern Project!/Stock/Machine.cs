@@ -73,9 +73,11 @@ namespace Design_Pattern_Project_.Stock
                         {
                             form.itemsLabel.Visible = true;
                         }
-                        // MessageBox.Show($"{itemEntry.Value}");
+                        if(itemEntry.Value <= 5)
+                        {
+                            ///דוח פחות מ5 מהמוצר
+                        }
                         inventory[item] -= 1;
-                        //  MessageBox.Show($"{inventory[item]}");
                         objectSelectedItems.Items.Add(itemEntry.Key);
 
                         objectSelectedItems.TotalPrice += itemEntry.Key.Price;
@@ -94,7 +96,7 @@ namespace Design_Pattern_Project_.Stock
                             }
                             else
                             {
-                                form.homePageState.display();
+                                currentState.display();
                                 form.paymentButton.Enabled = true;
                             }
                         }
@@ -133,12 +135,11 @@ namespace Design_Pattern_Project_.Stock
         {
             return currentState.endOrder();
         }
-     
         public void Pay(PaymentContext paymentContext)
         {
             paymentContext.PerformPayment(objectSelectedItems.TotalPrice);
         }
-        public void FinishOrder()
+        public void FinishingOrder()
         {
             form.startButton.Enabled = true;
             foreach (var item in objectSelectedItems.Items)
@@ -153,18 +154,10 @@ namespace Design_Pattern_Project_.Stock
         }
         public void StartAgain()
         {
-            form.paymentButton.Enabled = false;
-            form.cashtextBox.Text = string.Empty;
-            form.cashtextBox.Visible = false;
-            form.submitButton.Visible = false;
             objectSelectedItems.TotalPrice = 0;
             objectSelectedItems.Items.Clear();
-            form.itemsLabel.Visible = false;
-            form.toPayLabel.Text = String.Empty;
-            form.itemsLabel.Text = $"רשימת המוצרים-";
-            form.payment.Enabled = false;
-            form.startButton.Enabled = true;
             s = " בתאבון-  ";
+            currentState.display();
         }
         public void Packaging()
         {
