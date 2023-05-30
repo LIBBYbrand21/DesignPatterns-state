@@ -10,44 +10,38 @@ namespace Design_Pattern_Project_.State
     public class PaymentState : MenuState
     {
         private Form1 form;
-        private Machine machine;
         public PaymentState(Form1 form)
         {
             this.form = form;
         }
         public override string display()
         {
+            form.paymentButton.Enabled = false;
             form.comboBoxSnack.Enabled = false;
             form.comboBoxPastris.Enabled = false;
             form.comboBoxDrink.Enabled = false;
-            form.comboBoxCupDrink.Enabled=false;
+            form.comboBoxCupDrink.Enabled = false;
             form.giftButton.Enabled = true;
             form.bagButton.Enabled = true;
             form.noPackageButton.Enabled = true;
-            //form.paymentButton.Enabled = false;
-            //Console.WriteLine("ConcreteState Item Detailes display items");
-            return "ConcreteState Item Detailes display items";
+
+            return "Payment Options Displayed";
         }
         public override string endOrder()
-        {
-            MenuState state = new CompleteState(form);
-           // machine.TransitionTo(state);
-            //Console.WriteLine("ConcreteState Item Detailes display items");
-            return "ConcreteState Item Detailes display items";
+        { 
+            return "Order Completion State Entered";
         }
         public override string processPayment()
         {
             form.cardButton.Enabled = true;
             form.cashButton.Enabled = true;
-            //form.noPackageButton.Enabled = true;
-            //Console.WriteLine("ConcreteState Item Detailes display items");
-            return "ConcreteState Item Detailes display items";
+
+            return "Payment Processed";
         }
 
         public override string selectItem()
         {
-            //Console.WriteLine("ConcreteState Item Detailes display items");
-            return "ConcreteState Item Detailes display items";
+            return "Item Selection Not Applicable";
         }
     }
 }

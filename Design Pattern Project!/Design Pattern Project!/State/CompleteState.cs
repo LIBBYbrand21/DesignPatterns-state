@@ -10,26 +10,39 @@ namespace Design_Pattern_Project_.State
     public class CompleteState : MenuState
     {
         private Form1 form;
-        private Machine machine;
         public CompleteState(Form1 form)
         {
             this.form = form;
         }
         public override string display()
         {
-            throw new NotImplementedException();
+            form.paymentButton.Enabled = false;
+            form.cashtextBox.Text = string.Empty;
+            form.cashtextBox.Visible = false;
+            form.submitButton.Visible = false;
+            form.itemsLabel.Visible = false;
+            form.toPayLabel.Text = String.Empty;
+            form.itemsLabel.Text = $"רשימת המוצרים-";
+            form.payment.Enabled = false;
+            form.startButton.Enabled = true;
+
+            return "Order Completion Displayed";
         }
+
         public override string endOrder()
         {
-            throw new NotImplementedException();
+            return "Order Completed";
         }
+
         public override string processPayment()
         {
-            throw new NotImplementedException();
+            return "Payment Not Applicable";
         }
+
         public override string selectItem()
         {
-            throw new NotImplementedException();
+            return "Item Selection Not Applicable";
         }
     }
 }
+

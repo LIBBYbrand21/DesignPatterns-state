@@ -8,16 +8,17 @@ using System.Windows.Forms;
 
 namespace Design_Pattern_Project_.State
 {
-   public class ItemDetailesState : MenuState
+
+    public class ItemDetailesState : MenuState
     {
         private Form1 form;
-        private Machine machine;
         public ItemDetailesState(Form1 form)
         {
             this.form = form;
         }
         public override string display()
         {
+            form.paymentButton.Enabled = false;
             form.comboBoxDrink.Text = String.Empty;
             form.comboBoxCupDrink.Text = String.Empty;
             form.comboBoxPastris.Text = String.Empty;
@@ -27,26 +28,19 @@ namespace Design_Pattern_Project_.State
             form.Pastris.Enabled = false;
             form.CupDrink.Enabled = false;
 
-            // Console.WriteLine("ConcreteState Item Detailes display items");
-            return "ConcreteState Item Detailes display items";
-
+            return "Item Selection Displayed";
         }
         public override string endOrder()
         {
-            //Console.WriteLine("ConcreteState Item Detailes,can't  end the order");
-            return "ConcreteState Item Detailes,can't  end the order";
+            return "Order Not Applicable";
         }
         public override string processPayment()
         {
-            //Console.WriteLine("ConcreteState Item Detailes,can't  pay");
-            return "ConcreteState Item Detailes,can't  pay";
+            return "Payment Processing State Entered";
         }
         public override string selectItem()
-        {
-            MenuState state = new PaymentState(form);
-            machine.TransitionTo(state);
-            // Console.WriteLine("ConcreteState Item Detailes select Item");
-            return "ConcreteState Item Detailes select Item";
+        { 
+            return "Item Selected";
         }
     }
 }
