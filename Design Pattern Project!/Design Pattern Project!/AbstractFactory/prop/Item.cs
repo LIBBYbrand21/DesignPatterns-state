@@ -11,10 +11,12 @@ namespace DesignPatternsProject.AbstractFactory.prop
         public virtual string Name { get; set; }
         public virtual double Price { get; set; }
         public virtual string Description { get; set; }
-        public Item(string name, double price)
+        public virtual string Supplier { get; set; }
+        public Item(string name, double price, string supplier)
         {
             Name = name;
             Price = price;
+            Supplier = supplier;
         }
         public Item()
         {
@@ -26,9 +28,9 @@ namespace DesignPatternsProject.AbstractFactory.prop
             
         }
 
-        public static implicit operator Item(List<Item> v)
+       /* public static implicit operator Item(List<Item> v)
         {
             throw new NotImplementedException();
-        }
+        }*/
     }
 }

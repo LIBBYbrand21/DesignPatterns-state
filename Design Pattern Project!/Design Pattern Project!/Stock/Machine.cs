@@ -12,10 +12,11 @@ using System.Xml.Linq;
 using System.Globalization;
 using DesignPatternsProject.Observer;
 using Design_Pattern_Project_.Strategy;
+using Design_Pattern_Project_.Observer;
 
 namespace Design_Pattern_Project_.Stock
 {
-    public class Machine
+    public class Machine:IMachineSubject
     {
         private IReport reportFormat;
         private Form1 form;
@@ -24,6 +25,8 @@ namespace Design_Pattern_Project_.Stock
         private PaymentState paymentState;
         public ObjectItems objectSelectedItems = new ObjectItems();
         string s = "-בתאבון";
+        private List<IObserver> observers;
+
 
         public Machine(Form1 form)
         {
@@ -32,7 +35,7 @@ namespace Design_Pattern_Project_.Stock
             currentState = new HomePageState(form);
             reportFormat = new TextReport();
             paymentState = new PaymentState(form);
-
+            observers = new List<IObserver>();
         }
         private void CreateComBox()
         {
@@ -73,9 +76,9 @@ namespace Design_Pattern_Project_.Stock
                         {
                             form.itemsLabel.Visible = true;
                         }
-                        if(itemEntry.Value <= 5)
+                        if (itemEntry.Value <= 5)
                         {
-                            ///דוח פחות מ5 מהמוצר
+                            Notify(item);
                         }
                         inventory[item] -= 1;
                         objectSelectedItems.Items.Add(itemEntry.Key);
@@ -110,6 +113,7 @@ namespace Design_Pattern_Project_.Stock
                         form.comboBoxCupDrink.Enabled = false;
                         form.comboBoxDrink.Enabled = false;
                         form.comboBoxPastris.Enabled = false;
+
 
                     }
                 }
@@ -190,5 +194,23 @@ namespace Design_Pattern_Project_.Stock
             }
         }
 
+        public void Attach(IObserver observer)
+        {
+            observers.Add(observer);
+        }
+
+        public void Detach(IObserver observer)
+        {
+            observers.Remove(observer);
+        }
+
+        public void Notify(Item item)
+        {
+            foreach (var observer in observers)
+            {
+                observer.Update(item);
+            }
+        }
+       
     }
 }

@@ -47,3 +47,141 @@
 
  Name: קוקה קולה דיאט, Price: 9.9, Description: ready item (in a bag)
 
+ Name: צ'וקולטה, Price: 7.5, Description: Not Ready Item
+
+ Name: קפה שחור, Price: 10.5, Description: Not Ready Item
+
+ Name: קפה נמס, Price: 10.5, Description: Not Ready Item
+
+ Name: קפה הפוך, Price: 7.5, Description: Not Ready Item
+
+ Name: אייס קפה, Price: 8.5, Description: Not Ready Item
+
+ Name: אייס וניל, Price: 7.5, Description: Not Ready Item
+
+ Name: צ'יטוס קטשופ, Price: 7, Description: ready item
+
+ Name: פפסי, Price: 8.5, Description: ready item
+
+ Name: צ'יטוס קטשופ, Price: 7, Description: ready item
+
+ Name: קפה הפוך, Price: 7.5, Description: Not Ready Item
+
+ Name: צ'וקולטה, Price: 7.5, Description: Not Ready Item
+
+ Name: צ'וקולטה, Price: 7.5, Description: Not Ready Item
+
+ Name: ג'אמפ תות בננה, Price: 10, Description: ready item
+
+ Name: קפה הפוך, Price: 7.5, Description: Not Ready Item
+
+ Name: דוריטוס חריף אש, Price: 5.5, Description: ready item
+
+ Name: מירינדה, Price: 10.5, Description: ready item
+
+ Name: מירינדה, Price: 10.5, Description: ready item
+
+ Name: פריכיות אורז בשוקולד, Price: 6.5, Description: ready item
+
+ Name: ספרייט, Price: 9.5, Description: ready item
+
+ Name: צ'יטוס קטשופ, Price: 7, Description: ready item
+
+ Name: ספרייט, Price: 9.5, Description: ready item
+
+ Name: דוריטוס חמוץ חריף, Price: 5.5, Description: ready item
+
+ Name: ג'אמפ תות בננה, Price: 10, Description: ready item (as a gift)
+
+ Name: קוקה קולה דיאט, Price: 9.9, Description: ready item
+
+ Name: דוריטוס חריף אש, Price: 5.5, Description: ready item
+
+ Name: ג'אמפ תות בננה, Price: 10, Description: ready item
+
+ Name: דוריטוס חריף אש, Price: 5.5, Description: ready item
+
+ Name: פפסי, Price: 8.5, Description: ready item (as a gift)
+
+ Name: דוריטוס טבעי, Price: 8.5, Description: ready item
+
+ Name: בירה, Price: 12, Description: ready item
+
+ Name: צ'יטוס קטשופ, Price: 7, Description: ready item
+
+ Name: בירה, Price: 12, Description: ready item
+
+ Name: פריכיות אורז בשוקולד, Price: 6.5, Description: ready item
+
+ Name: ג'אמפ מנגו, Price: 12.5, Description: ready item
+
+ Name: דוריטוס חריף אש, Price: 5.5, Description: ready item
+
+ Name: ספרייט, Price: 9.5, Description: ready item
+
+ Name: קפה נמס, Price: 10.5, Description: Not Ready Item
+
+ Name: ג'אמפ תות בננה, Price: 10, Description: ready item
+
+ Name: ג'אמפ מנגו, Price: 12.5, Description: ready item
+
+ Name: מירינדה, Price: 10.5, Description: ready item (as a gift)
+
+ Name: פפסי, Price: 8.5, Description: ready item (in a bag)
+
+ Name: תפוצ'יפס שמנת בצל, Price: 9.5, Description: ready item (in a bag)
+
+ Name: ג'אמפ תות בננה, Price: 10, Description: ready item (as a gift)
+
+ Name: דוריטוס חריף אש, Price: 5.5, Description: ready item (as a gift)
+
+ Name: קוקה קולה דיאט, Price: 9.9, Description: ready item (in a bag)
+
+ Name: דוריטוס חמוץ חריף, Price: 5.5, Description: ready item (in a bag)
+
+ Name: בירה, Price: 12, Description: ready item
+
+ Name: קפה הפוך, Price: 7.5, Description: Not Ready Item
+
+ Name: ג'אמפ תות בננה, Price: 10, Description: ready item
+
+ Name: צ'יטוס קטשופ, Price: 7, Description: ready item
+
+ Name: ג'אמפ מנגו, Price: 12.5, Description: ready item (as a gift)
+
+ Name: אקספרסו, Price: 8.5, Description: Not Ready Item (as a gift)
+
+ Name: פפסי, Price: 8.5, Description: ready item
+
+ Name: דוריטוס חמוץ חריף, Price: 5.5, Description: ready item
+
+ Name: אייס קפה, Price: 8.5, Description: Not Ready Item
+
+ Name: ג'אמפ תות בננה, Price: 10, Description: ready item
+
+ Name: דוריטוס חמוץ חריף, Price: 5.5, Description: ready item
+
+ Name: פריכיות אורז בשוקולד, Price: 6.5, Description: ready item
+
+ Name: ג'אמפ מנגו, Price: 12.5, Description: ready item
+
+ Name: מירינדה, Price: 10.5, Description: ready item
+
+ Name: צ'יטוס קטשופ, Price: 7, Description: ready item
+
+ Name: דוריטוס חריף אש, Price: 5.5, Description: ready item
+
+ Name: מירינדה, Price: 10.5, Description: ready item
+
+ Name: ג'אמפ מנגו, Price: 12.5, Description: ready item (in a bag)
+
+ Name: דוריטוס חריף אש, Price: 5.5, Description: ready item (in a bag)
+
+ Name: ג'אמפ תות בננה, Price: 10, Description: ready item
+
+ Name: דוריטוס חריף אש, Price: 5.5, Description: ready item
+
+ Name: קפה נמס, Price: 10.5, Description: Not Ready Item
+
+ Name: ג'אמפ תות בננה, Price: 10, Description: ready item, Time: 30/05/2023 23:49:34
+

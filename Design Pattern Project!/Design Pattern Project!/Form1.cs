@@ -1,3 +1,4 @@
+using Design_Pattern_Project_.Observer;
 using Design_Pattern_Project_.State;
 using Design_Pattern_Project_.Stock;
 using Design_Pattern_Project_.Strategy;
@@ -14,6 +15,7 @@ namespace Design_Pattern_Project_
         private PaymentState paymentState;
         private string choosenPackage;
         PaymentContext paymentContext;
+        Suppliers Supplier;
 
         Machine machine;
 
@@ -130,6 +132,20 @@ namespace Design_Pattern_Project_
             {
                 machine.FinishingOrder();
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            var supplierA = new Suppliers("a");
+            var supplierB = new Suppliers("b");
+            var supplierC = new Suppliers("c");
+            var supplierD = new Suppliers("d");
+            var supplierH = new Suppliers("h");
+            machine.Attach(supplierA);
+            machine.Attach(supplierB);
+            machine.Attach(supplierC);
+            machine.Attach(supplierD);
+            machine.Attach(supplierH);
         }
     }
 }

@@ -13,7 +13,7 @@ namespace DesignPatternsProject.AbstractFactory.prop
         {
             Description = "ready item";
         }
-        public ReadyItem(string name, double price) : base(name, price)
+        public ReadyItem(string name, double price,string supplier) : base(name, price, supplier)
         {
             Description = "ready item";
         }
@@ -23,7 +23,8 @@ namespace DesignPatternsProject.AbstractFactory.prop
             {
                 Name = Name,
                 Price = Price,
-                Description =Description
+                Description =Description,
+                Supplier = Supplier
 
             };
         }

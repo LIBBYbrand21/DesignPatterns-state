@@ -15,7 +15,7 @@ namespace DesignPatternsProject.AbstractFactory.prop
         {
             Description = "Not Ready Item";
         }
-        public NotReadyItem(string name, double price, DrinkBuilder drinkBuilder) : base(name, price)
+        public NotReadyItem(string name, double price, DrinkBuilder drinkBuilder,string supplier) : base(name, price,supplier)
         {
             Description = "not ready item";
             this.DrinkBuilder = drinkBuilder;
@@ -26,7 +26,8 @@ namespace DesignPatternsProject.AbstractFactory.prop
             {
                 Name = Name,
                 Price =Price,
-                Description = Description
+                Description = Description,
+                Supplier=Supplier
             };
         }
     }

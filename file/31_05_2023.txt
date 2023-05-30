@@ -1,0 +1,12 @@
+ Name: קוקה קולה דיאט, Price: 9.9, Description: ready item, Time: 31/05/2023 01:16:10
+
+ Name: דוריטוס טבעי, Price: 8.5, Description: ready item (as a gift), Time: 31/05/2023 01:16:36
+
+ Name: צ'וקולטה, Price: 7.5, Description: Not Ready Item, Time: 31/05/2023 01:18:56
+
+ Name: צ'וקולטה, Price: 7.5, Description: Not Ready Item, Time: 31/05/2023 01:28:13
+
+ Name: ספרייט, Price: 9.5, Description: ready item, Time: 31/05/2023 01:28:34
+
+ Name: קפה שחור, Price: 10.5, Description: Not Ready Item (as a gift), Time: 31/05/2023 01:28:56
+
