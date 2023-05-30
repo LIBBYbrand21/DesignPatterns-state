@@ -275,7 +275,7 @@
             // 
             makingDrinks.AutoSize = true;
             makingDrinks.Font = new Font("Snap ITC", 10.8F, FontStyle.Italic, GraphicsUnit.Point);
-            makingDrinks.Location = new Point(64, 200);
+            makingDrinks.Location = new Point(47, 171);
             makingDrinks.Name = "makingDrinks";
             makingDrinks.Size = new Size(151, 24);
             makingDrinks.TabIndex = 24;

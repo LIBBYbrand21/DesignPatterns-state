@@ -15,45 +15,15 @@ namespace Design_Pattern_Project_.BuilderItem
             drink = form.makingDrinks;
             drink.Visible = true;
             drink.Text = "";
+            drink.Image = null;
         }
         public Label GetDrink()
         {
             return drink;
         }
-        public virtual /*async Task*/void AddSugar()
-        {
-            //await Task.Delay(1000);
-            drink.Text += "\nadd sugar";
+        public abstract void AddPowders();
+        public abstract void AddPicture();
+        public abstract void AddLiquids();
+        public abstract void AddExtras();
         }
-        public virtual /*async Task*/void AddCoffee()
-        {
-            //await Task.Delay(1000);
-            drink.Text += "\nadd coffee";
-        }
-        public virtual/*async Task*/ void AddWater()
-        {
-            //await Task.Delay(1000);
-            drink.Text += "\nadd water";
-        }
-        public virtual /*async Task*/void AddMilk()
-        {
-            //await Task.Delay(1000);
-            drink.Text += "\nadd milk";
-        }
-        public virtual /*async Task*/void AddMilkJam()
-        {
-            //await Task.Delay(1000);
-            drink.Text += "\nadd milk jam";
-        }
-        public virtual /*async Task*/void AddNut()
-        {
-            //await Task.Delay(1000);
-            drink.Text += "\nadd nuts";
-        }
-        public virtual /*async Task*/void AddVanil()
-        {
-            //await Task.Delay(1000);
-            drink.Text += "\nadd vanil";
-        }
-    }
 }

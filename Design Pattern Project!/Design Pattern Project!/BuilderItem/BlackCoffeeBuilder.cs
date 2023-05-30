@@ -8,22 +8,29 @@ namespace Design_Pattern_Project_.BuilderItem
 {
     public class BlackCoffeeBuilder : DrinkBuilder
     {
-        public override void AddMilk()
+        public override void AddExtras()
         {
-            // no milk for black coffee
+            //no extras in black coffee.
         }
 
-        public override void AddMilkJam()
+        public override void AddLiquids()
         {
-            // no milk jam for black coffee
+            drink.Text += "\nadd water";
+            Task.Delay(500).Wait();
         }
-        public override void AddVanil()
+
+        public override void AddPowders()
         {
-            // no vanil for black coffee
+            drink.Text += "\nadd sugar";
+            Task.Delay(500).Wait();
+            drink.Text += "\nadd black coffee";
+            Task.Delay(500).Wait();
         }
-        public override void AddNut()
+        public override void AddPicture()
         {
-            // no nuts for black coffee
+            Image image1 = Image.FromFile("C:\\Users\\The user\\Documents\\שנה ב\\DesignPatterns\\project\\E\\9\\images\\black coffee.jpg");
+            //drink.Size = new Size(image1.Width, image1.Height);
+            drink.Image = image1;
         }
     }
 

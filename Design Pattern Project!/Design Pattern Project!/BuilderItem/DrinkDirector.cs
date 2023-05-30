@@ -8,25 +8,16 @@ namespace Design_Pattern_Project_.BuilderItem
 {
     public class DrinkDirector
     {
-        public async void Prepare(DrinkBuilder builder,Form1 form)
+        public void Prepare(DrinkBuilder builder, Form1 form)
         {
             builder.CreateDrink(form);
-            builder.AddSugar();
-            await Task.Delay(1000);
-            builder.AddCoffee();
-            await Task.Delay(1000);
-            builder.AddWater();
-            await Task.Delay(1000);
-            builder.AddMilk();
-            await Task.Delay(1000);
-            builder.AddMilkJam();
-            await Task.Delay(1000);
-            builder.AddNut();
-            builder.AddVanil();
-            await Task.Delay(500);
+            builder.AddPowders();
+            builder.AddLiquids();
+            builder.AddExtras();
+            builder.AddPicture();
             form.homePageState.display();
             form.paymentButton.Enabled = true;
-            await Task.Delay(4000);
+            Task.Delay(2000).Wait();
             form.makingDrinks.Visible = false;
         }
     }

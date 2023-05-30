@@ -9,17 +9,32 @@ namespace Design_Pattern_Project_.BuilderItem
 {
     public class InstantCoffeeBuilder : DrinkBuilder
     {
-        public override void AddVanil()
+        public override void AddExtras()
         {
-            // no vanil for instant coffee
+           //no extras in instant coffee
         }
-        public override void AddNut()
+
+        public override void AddLiquids()
         {
-            // no nuts for instant coffee
+            drink.Text += "\nadd water";
+            Task.Delay(1000).Wait();
+            drink.Text += "\nadd milk";
+            Task.Delay(1000).Wait();
         }
-        public override void AddMilkJam()
+
+        public override void AddPowders()
         {
-            // no milk jam for instant coffee
+            drink.Text += "\nadd sugar";
+            Task.Delay(1000).Wait();
+            drink.Text += "\nadd instant coffee";
+            Task.Delay(1000).Wait();
         }
+        public override void AddPicture()
+        {
+            Image image1 = Image.FromFile("C:\\Users\\The user\\Documents\\שנה ב\\DesignPatterns\\project\\E\\9\\images\\instant coffee.jpg");
+            //drink.Size = new Size(image1.Width, image1.Height);
+            drink.Image = image1;
+        }
+
     }
 }
