@@ -32,7 +32,7 @@ namespace DesignPatternsProject.Observer
             }
             WriteToFile(item);
         }
-        public void WriteToFile(Item item)
+        private void WriteToFile(Item item)
         {
             using (StreamWriter writer = new(filePath, true))
             {

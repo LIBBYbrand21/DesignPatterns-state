@@ -34,7 +34,7 @@ namespace DesignPatternsProject.Observer
             WriteToFile(item);
         }
 
-        public void WriteToFile(Item item)
+        private void WriteToFile(Item item)
         {
             string filePath = "report.csv";
             using (StreamWriter writer = new(filePath))
