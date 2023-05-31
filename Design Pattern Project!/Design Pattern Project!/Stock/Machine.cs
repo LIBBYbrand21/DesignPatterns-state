@@ -148,7 +148,7 @@ namespace Design_Pattern_Project_.Stock
             form.startButton.Enabled = true;
             foreach (var item in objectSelectedItems.Items)
             {
-                s += $"{item.Name},";
+                s += $"\n{item.Name},";
                 reportFormat.DailyUpdate(item);
             }
             MessageBox.Show(s);
@@ -160,7 +160,7 @@ namespace Design_Pattern_Project_.Stock
         {
             objectSelectedItems.TotalPrice = 0;
             objectSelectedItems.Items.Clear();
-            s = " בתאבון-  ";
+            s = " בתאבון- ";
             currentState.display();
         }
         public void Packaging()
