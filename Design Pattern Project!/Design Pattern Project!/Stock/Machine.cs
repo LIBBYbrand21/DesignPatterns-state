@@ -21,8 +21,8 @@ namespace Design_Pattern_Project_.Stock
         private IReport reportFormat;
         private Form1 form;
         public MenuState currentState;
-        ItemDetailesState itemDetailesState;
-        private PaymentState paymentState;
+/*        ItemDetailesState itemDetailesState;
+*/        private PaymentState paymentState;
         public ObjectItems objectSelectedItems = new ObjectItems();
         string s = "-בתאבון";
         private List<IObserver> observers;

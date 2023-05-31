@@ -9,26 +9,19 @@ namespace DesignPatternsProject.Observer
 {
     public class TextReport : IReport
     {
-        public static DateTime currentDate
+        public DateTime currentDate
         {
             get { return currentDate = DateTime.Now; }
             set { }
         }
-        public static string fileName
+        public string fileName;
+        public string directoryPath;
+        public string filePath;
+        public TextReport()
         {
-            get { return fileName = $"{currentDate.ToString("dd_MM_yyyy")}.txt"; }
-            set { }
-        }
-        public static string directoryPath
-        {
-            get
-            { return directoryPath = @"..\..\..\..\..\file"; }
-            set { }
-        }
-        public static string filePath
-        {
-            get { return filePath = Path.Combine(directoryPath, fileName); }
-            set { }
+            fileName = $"{currentDate.ToString("dd_MM_yyyy")}.txt";
+            directoryPath = @"..\..\..\..\..\file";
+            filePath = Path.Combine(directoryPath, fileName);
         }
         public void DailyUpdate(Item item)
         {

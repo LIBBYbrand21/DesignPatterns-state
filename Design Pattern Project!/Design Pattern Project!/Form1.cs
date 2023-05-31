@@ -13,7 +13,6 @@ namespace Design_Pattern_Project_
         public HomePageState homePageState;
         private ItemDetailesState itemDetails;
         private PaymentState paymentState;
-        private string choosenPackage;
         PaymentContext paymentContext;
         Suppliers Supplier;
 
